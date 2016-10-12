@@ -6,7 +6,7 @@
 
 <http://www.jack003.com>
 
-![Blog](blog.gif)
+
 
 This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
 

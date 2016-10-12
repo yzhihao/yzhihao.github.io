@@ -1,22 +1,22 @@
 - name:
-    detail: Nextcode
-    i18n: nextcode
+    detail:
+    i18n: 
   desc:
-    detail: Now I am in Nextcode and develop website with Python code for genetic analysis.
-    i18n: nextcode_des
+    detail: 
+    i18n: 
   date:
-    detail: Apr. 2016
+    detail: 
     i18n: nextcode_date
   job:
-    detail: Python Developer
-    i18n: nextcode_job
+    detail: 
+    i18n: 
   icon: fa-plus-square
 
 - name:
     detail: Netease Game
     i18n: netease
   desc:
-    detail: In Netease game, I learned game service system and use Python code for ops.
+    detail:
     i18n: netease_des
   date:
     detail: Jun. 2015
@@ -30,7 +30,7 @@
     detail: Ucloud
     i18n: ucloud
   desc:
-    detail: In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.
+    detail: 
     i18n: ucloud_des
   date:
     detail: Sep. 2013
@@ -41,15 +41,15 @@
   icon: fa-cloud
 
 - name:
-    detail: Graduation
+    detail: 
     i18n: college
   desc:
-    detail: At July 2013,I graduated from college and started my IT technology tour.
-    i18n: college_des
+    detail: 
+    i18n: 
   date:
-    detail: Jul. 2013
-    i18n: college_date
+    detail:
+    i18n: 
   job:
-    detail: Student
-    i18n: college_job
+    detail: 
+    i18n: 
   icon: fa-book

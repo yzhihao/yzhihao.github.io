@@ -1,6 +1,6 @@
 {
   "website":{
-    "title": "Jack's blog"
+    "title": "yzh's blog"
   },
   "nav":{
     "home": "Home",
@@ -13,35 +13,33 @@
   },
   "about_me":{
     "about_me": "About Me",
-    "des": "I am a Python engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel."
+    "des": "i am a student come from GDUT"
   },
   "skills":{
     "my_skills": "My Skills"
   },
   "projects":{
     "my_projects": "My Projects",
-    "saplatform": "Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.",
-    "jalpc": "Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.",
-    "angularjs": "It is a web font application written by Angularjs and deployed by Jekyll on github (gh-pages), the backend platform is Leancloud, you can use Parse as well.",
-    "rsser": "Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually."
-  },
+    "python": "This is a python crawler  I  developed in the second year of my university.This crawler is crawling the information of the user and the problem from ZhiHu. There is also a  demo that it can invoke the page JS.",
+    "library": "In older to  enter into TopView studio,I develop this project."
+   },
   "career":{
     "my_career": "My Career",
-    "nextcode": "Nextcode",
-    "nextcode_des": "Now I am in Nextcode and develop website with Python code for genetic analysis.",
-    "nextcode_date": "Apr. 2016",
-    "nextcode_job": "Python Developer",
-    "netease": "Netease Game",
-    "netease_des": "In Netease game, I learned game service system and use Python code for ops.",
-    "netease_date": "Jun. 2015",
-    "netease_job": "Dev Ops",
-    "ucloud": "Ucloud",
-    "ucloud_des": "In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.",
-    "ucloud_date": "Sep. 2013",
-    "ucloud_job": "Dev Ops",
-    "college": "Graduation",
-    "college_des": "At July 2013,I graduated from college and started my IT technology tour.",
-    "college_date": "Jul. 2013",
+    "nextcode": "experience",
+    "nextcode_des": "Now I am in TopView Studio and I am a back-end Learner.",
+    "nextcode_date": "2016-",
+    "nextcode_job": "back-end Learner",
+    "netease": "Game",
+    "netease_des": "In the boring time, or when the mood is not good, I will play football game whose name is ShiKuang.",
+    "netease_date": "hobby",
+    "netease_job": "my Game",
+    "ucloud": "Future",
+    "ucloud_des": "In the future, I hope to become a  network  engineer and can travel around the world.I hope that I can meet more friend.",
+    "ucloud_date": "In The Future",
+    "ucloud_job": "me",
+    "college": "College",
+    "college_des": "I am now a computer specialized student and will graduate in 2019.Study well and make progress every day.",
+    "college_date": "2016-2019",
     "college_job": "Student"
   },
   "blog":{

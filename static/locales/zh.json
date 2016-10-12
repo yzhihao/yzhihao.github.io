@@ -1,6 +1,6 @@
 {
   "website":{
-    "title": "杰克的博客"
+    "title": "叶志豪的博客"
   },
   "nav":{
     "home": "首页",
@@ -13,35 +13,33 @@
   },
   "about_me":{
     "about_me": "关于我",
-    "des": "我是一名Python工程师，有开发网站，运维自动化，编写脚本的经验。人生是不断学习的过程，工作使我变的更严谨，旅行让我的生活更加多彩。通过编程和旅行我能结识到很多朋友。"
+    "des": "我是一名来自广东工业大学的大二的学生"
   },
   "skills":{
     "my_skills": "我的技能"
   },
   "projects":{
     "my_projects": "我的项目",
-    "saplatform": "Saplatform是一个自动化运维服务，包括资产管理、项目发布、数据库管理等功能,它可以管理大量服务器。",
-    "jalpc": "Jalpc是一个非常简洁、漂亮和快速部署的Jekyll主题，它有非常全面的功能，可以很方便的修改和使用，适应多种设备。",
-    "angularjs": "这是一个Angularjs写的前端应用，使用Jelyll部署在github的gh-pages上，后台使用Leancloud，你也可以使用Parse。",
-    "rsser": "Rsser是一个Ionic应用，在这个应用下，我们可以自由的阅读新闻和文章，你可以从给定的列表中添加rss地址也可以手动添加。"
-  },
+    "python": "这是我在大学的第二年开发的python爬虫，爬虫抓取知乎用户和问题的信息。还有一个演示程序，它可以调用页面JS。",
+    "library": "为了进入TopView工作室，我开发了这个项目"
+    },
   "career":{
     "my_career": "职业生涯",
-    "nextcode": "Nextcode",
-    "nextcode_des": "现在我在Nextcode，使用Python为基因分析项目做网站.",
-    "nextcode_date": "2016年4月",
-    "nextcode_job": "Python工程师",
-    "netease": "网易游戏",
-    "netease_des": "在网易游戏，我了解到游戏体系，并使用Python代码为自动化运维服务.",
-    "netease_date": "2015年6月",
-    "netease_job": "运维开发工程师",
-    "ucloud": "Ucloud",
-    "ucloud_des": "在Ucloud,我开始和服务器、操作系统打交道，并使用shell脚本管理海量服务器.",
-    "ucloud_date": "2013年9月",
-    "ucloud_job": "运维开发工程师",
-    "college": "毕业",
-    "college_des": "2013年7月大学毕业，开始了IT职业生涯",
-    "college_date": "2013年7月",
+    "nextcode": "经历",
+    "nextcode_des": "现在我在Topview工作室学习做项目。我是属于后台组的",
+    "nextcode_date": "现在",
+    "nextcode_job": "后端学习中",
+    "netease": "游戏",
+    "netease_des": "在我无聊，或者不开心的时候，我会玩一个叫做实况的电脑足球游戏.",
+    "netease_date": "现在",
+    "netease_job": "一起玩耍",
+    "ucloud": "未来",
+    "ucloud_des": "在未来我想做一个厉害的计算机工程师，并在世界到处看看，认识更多朋友",
+    "ucloud_date": "在路上",
+    "ucloud_job": "梦想还是要有的",
+    "college": "学习",
+    "college_des": "现在在广东工业大学计算机系，好好学习，天天向上",
+    "college_date": "2016-2019",
     "college_job": "学生"
   },
   "blog":{

@@ -1,23 +1,11 @@
-- name: 'Saplatform'
-  i18n: 'saplatform'
-  url: ''
-  img: ''
-  desc: ''
+- name: 'python spider'
+  i18n: 'python'
+  url: '/yzhihao/python_spier'
+  img: 'static/img/landing/python.jpg'
+  desc: 'This is a python crawler  I  developed in the second year of my university.This crawler is crawling the information of the user and the problem from ZhiHu. There is also a  demo that it can invoke the page JS.'
 
-- name: 'Jalpc'
-  i18n: 'jalpc'
-  url: '/Jack614/jalpc_jekyll_theme'
-  img: ''
-  desc: ""
-
-- name: 'Jalpc-A'
-  i18n: 'angularjs'
-  url: '/Jack614/Jalpc-A'
-  img: ''
-  desc: ""
-
-- name: 'Rsser'
-  i18n: 'rsser'
-  url: '/Jack614/Rsser'
-  img: ''
-  desc: ""
+- name: 'library'
+  i18n: 'library'
+  url: '/yzhihao/python_spier/com.topview.library'
+  img: 'static/img/landing/saplatform.png'
+  desc: "In older to  enter into TopView studio,I develop this project."

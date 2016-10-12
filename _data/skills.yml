@@ -1,17 +1,17 @@
-- name: Python
+- name: java
   percentage: 85
 
-- name: 
-  percentage: 
+- name: java framework
+  percentage: 60
 
-- name: 
-  percentage: 
+- name: git
+  percentage: 60
 
-- name:
-  percentage:
+- name: network security
+  percentage: 30
 
-- name: 
-  percentage: 
+- name: python
+  percentage: 50
 
-- name: 
-  percentage: 
+- name: Front end
+  percentage: 45

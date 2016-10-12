@@ -1,55 +1,55 @@
 - name:
-    detail:
-    i18n: 
+    detail: experience 
+    i18n: nextcode
   desc:
-    detail: 
-    i18n: 
+    detail: Now I am in TopView Studio and I am a back-end Learner.
+    i18n: nextcode_des
   date:
-    detail: 
+    detail: 2016-
     i18n: nextcode_date
   job:
-    detail: 
-    i18n: 
+    detail: back-end Learner
+    i18n: nextcode_job
   icon: fa-plus-square
 
 - name:
-    detail: Netease Game
+    detail: Game
     i18n: netease
   desc:
-    detail:
+    detail: In the boring time, or when the mood is not good, I will play football game whose name is ShiKuang.
     i18n: netease_des
   date:
-    detail: Jun. 2015
+    detail: hobby
     i18n: nextcode_date
   job:
-    detail: Dev Ops
+    detail: my Game
     i18n: netease_job
   icon: fa-gamepad
 
 - name:
-    detail: Ucloud
+    detail: Future
     i18n: ucloud
   desc:
-    detail: 
+    detail: In the future, I hope to become a  network  engineer and can travel around the world.I hope that I can meet more friend.
     i18n: ucloud_des
   date:
-    detail: Sep. 2013
+    detail: In The Future
     i18n: ucloud_date
   job:
-    detail: Dev Ops
+    detail: me
     i18n: ucloud_job
   icon: fa-cloud
 
 - name:
-    detail: 
+    detail: College
     i18n: college
   desc:
-    detail: 
-    i18n: 
+    detail: I am now a computer specialized student and will graduate in 2019.Study well and make progress every day. 
+    i18n: college_des
   date:
-    detail:
-    i18n: 
+    detail: 2016-2019
+    i18n: college_date
   job:
-    detail: 
-    i18n: 
+    detail: Student
+    i18n: college_job
   icon: fa-book

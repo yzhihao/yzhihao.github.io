@@ -4,8 +4,8 @@
 - name: Python
   href: '/python/'
 
-- name: Linux
-  href: '/linux/'
+- name: tools
+  href: '/tools/'
 
 - name: HTML
   href: '/html/'

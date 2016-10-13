@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: "Myblog"
+title: "YZH.home"
 baseurl: "/"
 description: "yzh's blog,use Jekyll and github pages."
 keywords: "yzh,Jalpc,blog,Jekyll,github,gh-pages"
@@ -65,7 +65,7 @@ languages:
     flag: 'static/img/flags/China.png'
 
 # blog img path
-img_path: '/path/of/blog/img/'
+img_path: 'https://yzhihao.github.io/static/img/blog'
 
 # donate
 donate:

@@ -6611,7 +6611,7 @@ body.landing-page {
   transition: all 0.3s ease-in-out 0s;
 }
 .landing-page .navbar-default .nav li a {
-  color: #fff;
+  color: blue;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -6718,7 +6718,7 @@ body.landing-page {
 }
 .landing-page .carousel .item {
   height: 470px;
-  background-color: #777;
+  background-color: white;
 }
 .landing-page .carousel-inner > .item > img {
   position: absolute;

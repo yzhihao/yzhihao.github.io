@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "learning git"
-desc: "git--github学习
+desc: "git--github学习"
 keywords: "git,github,jekyll,"
 date:   2016-10-01
 categories: [tools]

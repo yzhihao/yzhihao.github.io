@@ -6656,7 +6656,7 @@ body.landing-page {
   display: block;
   font-size: 14px;
   background: #3385FF;
-  padding: 15px 20px 15px 20px;
+  padding: 1px;
   border-radius: 0 0 5px 5px;
   font-weight: 700;
   transition: all 0.3s ease-in-out 0s;
@@ -6694,10 +6694,10 @@ body.landing-page {
   border-bottom: 1px solid #e7eaec !important;
 }
 .landing-page .navbar.navbar-scroll .navbar-brand {
-  margin-top: 15px;
+  margin-top: 10px;
   border-radius: 5px;
   font-size: 12px;
-  padding: 10px;
+  padding: 2px;
   height: auto;
 }
 .landing-page .header-back {

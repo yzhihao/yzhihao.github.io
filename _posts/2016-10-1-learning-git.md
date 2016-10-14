@@ -101,4 +101,4 @@ git log --graph命令可以看到分支合并图。
 在jekll中有许许多多的模板，模板的github地址在[Jekyll  github地址](https://github.com/jekyll/jekyll/wiki/Configuration)
 
 ###最后
-![github]({{ site.img_path }}/tools/git.jpg)
+<img src="{{ site.img_path }}/tools/git.jpg" alt="header" style="height:100%;width:100%;"/>

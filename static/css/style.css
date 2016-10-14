@@ -6611,7 +6611,7 @@ body.landing-page {
   transition: all 0.3s ease-in-out 0s;
 }
 .landing-page .navbar-default .nav li a {
-  color: blue;
+  color:blue;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -7090,7 +7090,7 @@ body.landing-page {
     margin-top: 6px;
     border-radius: 5px;
     font-size: 12px;
-    padding: 10px;
+    padding: 0px;
     height: auto;
   }
   .landing-page .navbar-wrapper .navbar {

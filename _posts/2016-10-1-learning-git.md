@@ -18,7 +18,6 @@ $ git commit -m "add 3 files."
 
 * 下面是一个(包括文件**上传下拉，分支操作**)[网上学习笔记](http://note.youdao.com/share/?id=29b306d4f3c6ac93c1f9713f7442d2a6&type=note#/)
 
-
 ##git的一些常用命令
 * git log查看之前的版本
 
@@ -100,5 +99,6 @@ git log --graph命令可以看到分支合并图。
 在githubpage学习中，这个网页本身就是githubpage的一个静态博客。
 在用githubpage编写博客时，最常用的就是githubpage加jekyll进行创建属于自己的博客。
 在jekll中有许许多多的模板，模板的github地址在[Jekyll  github地址](https://github.com/jekyll/jekyll/wiki/Configuration)
+
 ###最后
 ![github]({{ site.img_path }}/tools/git.jpg)

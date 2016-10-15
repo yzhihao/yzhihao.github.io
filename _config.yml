@@ -2,10 +2,10 @@
 
 # Website settings
 title: "YZH.home"
-baseurl: "/"
+baseurl: ""
 description: "yzh's blog,use Jekyll and github pages."
 keywords: "yzh,Jalpc,blog,Jekyll,github,gh-pages"
-baseurl: "/"
+baseurl: ""
 url: "https://yzhihao.github.io/"
 # url: "http://127.0.0.1:4000"
 

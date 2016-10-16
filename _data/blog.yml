@@ -7,14 +7,14 @@
 - name: tools
   href: '/tools/'
 
-- name: HTML
-  href: '/html/'
+- name: java
+  href: '/java/'
 
-- name: Database
-  href: '/database/'
+- name: framework
+  href: '/framework/'
 
-- name: Mac
-  href: '/mac/'
+- name: others
+  href: '/others/'
 
 - name: Life
   href: '/life/'

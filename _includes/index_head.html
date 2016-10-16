@@ -31,7 +31,16 @@
   <script src="{{"bower_components/i18next/i18next.min.js"| prepend: site.baseurl }}"></script>
   <script src="{{"bower_components/PACE/pace.min.js"| prepend: site.baseurl }}"></script>
   <script src="{{"bower_components/wow/dist/wow.min.js"| prepend: site.baseurl }}"></script>
-
+  <script language="javascript">
+  function HideWeekMonth(){
+    var mainCol = window.document.getElementById('yzh_title');
+    var hMainCol =  mainCol .offsetHeight;
+    alter(hMainCol);
+    if(hMainCol>40){
+      $("#yzh_title").hide();
+    }
+  }
+  </script>
   <!-- Custom and plugin javascript -->
   <!-- <script src="{{"static/js/inspinia.js"| prepend: site.baseurl }}"></script> -->
 

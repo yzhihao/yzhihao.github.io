@@ -20,13 +20,15 @@ icon: fa-bookmark-o
 * 可以查看是一个(包括文件**上传下拉，分支操作**)[网上入门学习笔记](http://note.youdao.com/share/?id=29b306d4f3c6ac93c1f9713f7442d2a6&type=note#/)
 * 网上教程也有一堆，推荐的话还是廖雪峰老师的:[git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)
 
-##几个概念：
+## 几个概念：
 * 工作区（Working Directory）：就是你在电脑里能看到的目录。
 * 版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
 * Git的版本分为两大部分，一是：称为stage（或者叫index）的暂存区；还有就是分支。
 * 当我用git add ...时，是讲工作区的提交到版本库的暂存区。
 * 当我们用git commit -m ... 时，是提交到版本库的当前分支。
-<img src="{{ site.img_path }}/tools/git1.jpg" alt="header1" style="height:100%;width:100%;"/>
+
+<img src="{{ site.img_path }}/tools/git1.jpg" alt="header1" style="height:auto!important;width:auto!important;max-width:1020px;"/>
+
 ## git的一些常用命令
 
 * git init 创建一个仓库

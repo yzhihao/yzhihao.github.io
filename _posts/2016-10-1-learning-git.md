@@ -10,7 +10,9 @@ icon: fa-bookmark-o
 ---
 
 # git--github学习
-[TOC]
+
+* 目录
+{:toc}
 
 ## 首先什么是github，什么是git。
 

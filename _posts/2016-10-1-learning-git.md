@@ -27,6 +27,7 @@ $ git commit -m "add 3 files."
 
 git rm --cached \* -r   删除所有缓冲区的文件，*表示通配符，这里可以统配其他文件。
 本地上传
+
 * git init
 * git add (folder_name)
 * git commit -m ("txt")
@@ -70,6 +71,7 @@ git checkout -- name 删除文件后把本地版本库的回复到文件夹中
 git reflog用来记录你的每一次命令
 
 删除分支：git branch –d name
+
 * 合并就是时间线的合并
 * vi (folder_name)修改文件
 * 用esc健：wq就是保存退出
@@ -84,7 +86,7 @@ git push remote :<branch>  ->移除远程分支
 输入 touch .gitignore 在文件夹就生成了一个“.gitignore”文件。
 >如果对.gitignore文件有什么疑问，可以查看这个博客：[.gitignore文件详解](http://www.cnblogs.com/eddy-he/archive/2012/03/08/git_ignore_file.html)
 
-##版本回退
+## 版本回退
 git reflog 看所有操作
 git reset --hard HEAD^ 回退到上一个版本
 git reset --hard 3628164 后面7位版本号

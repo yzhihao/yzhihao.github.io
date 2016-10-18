@@ -7,7 +7,7 @@
     "about_me": "关于我",
     "skills": "技能",
     "projects": "项目",
-    "career": "职业",
+    "career": "在路上",
     "blog": "博客",
     "link": "友情链接"
   },
@@ -24,7 +24,7 @@
     "library": "为了进入TopView工作室，我开发了这个项目"
     },
   "career":{
-    "my_career": "职业生涯",
+    "my_career": "成长路上",
     "nextcode": "经历",
     "nextcode_des": "现在我在Topview工作室学习做项目。我是属于后台组的",
     "nextcode_date": "现在",

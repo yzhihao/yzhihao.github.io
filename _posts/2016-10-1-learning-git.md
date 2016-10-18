@@ -45,6 +45,7 @@ icon: fa-bookmark-o
 * git branch 查看所有分支。
 * git checkout branch_name 切换分支。
 * 可以用add添加文件到暂存区。代码如下：
+
 ```
 git add file1.txt//增加file1.txt文件
 git add file2.txt file3.txt//增加file1.txt，file3.txt文件

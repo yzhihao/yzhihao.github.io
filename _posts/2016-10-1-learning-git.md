@@ -1,12 +1,23 @@
 ---
 layout: post
-title:  "learning git"
-desc: "git--github学习"
-keywords: "git,github,jekyll,"
-date:   2016-10-01
-categories: [tools]
-tags: [tools]
+title: learning git
+desc: git--github学习
+keywords: 'git,github,jekyll,'
+date: 2016-10-01T00:00:00.000Z
+categories:
+  - tools
+tags:
+  - tools
 icon: fa-bookmark-o
+comments:
+  - author:
+      type: full
+      displayName: yzhihao
+      url: 'https://github.com/yzhihao'
+      picture: 'https://avatars.githubusercontent.com/u/18466640?v=3&s=73'
+    content: '123'
+    date: 2016-10-18T05:34:01.344Z
+
 ---
 
 # git--github学习

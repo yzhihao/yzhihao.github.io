@@ -9,15 +9,6 @@ categories:
 tags:
   - tools
 icon: fa-bookmark-o
-comments:
-  - author:
-      type: full
-      displayName: yzhihao
-      url: 'https://github.com/yzhihao'
-      picture: 'https://avatars.githubusercontent.com/u/18466640?v=3&s=73'
-    content: '123'
-    date: 2016-10-18T05:34:01.344Z
-
 ---
 
 # git--github学习

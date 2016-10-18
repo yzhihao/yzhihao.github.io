@@ -9,6 +9,22 @@ categories:
 tags:
   - tools
 icon: fa-bookmark-o
+comments:
+  - author:
+      type: full
+      displayName: yzhihao
+      url: 'https://github.com/yzhihao'
+      picture: 'https://avatars.githubusercontent.com/u/18466640?v=3&s=73'
+    content: '123'
+    date: 2016-10-18T05:34:01.344Z
+  - author:
+      type: full
+      displayName: yzhihao
+      url: 'https://github.com/yzhihao'
+      picture: 'https://avatars.githubusercontent.com/u/18466640?v=3&s=73'
+    content: >-
+      &#x6765;&#x6765;&#x6765;&#xFF0C;&#x4E00;&#x8D77;&#x5B66;&#x4E60;git-github&#xFF0C;&#x6B22;&#x8FCE;&#x5728;&#x8FD9;&#x91CC;&#x7559;&#x8A00;&#x3002;
+    date: 2016-10-18T06:17:32.407Z
 ---
 
 # git--github学习

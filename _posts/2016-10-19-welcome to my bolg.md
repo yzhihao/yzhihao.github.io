@@ -52,7 +52,7 @@ icon: fa-bookmark-o
 因为是托管在github上，所以git和github还是要学好的，这点我写了一个文章，可以一起学习,地址是：[git-github学习](https://yzhihao.github.io/tools/2016/10/01/learning-git.html)
 
 ### web前端
-web前端的知识，包括html，css，js，jQuery，bootstrap等。这些起码是要大概了解的，其实，我也是web后端的，这些前端的知识很虚。最低要去应该是简单会用基础。
+web前端的知识，包括html，css，js，jQuery，bootstrap等。这些起码是要大概了解的，其实，我也是web后端的，这些前端的知识很虚。最低要求应该是简单会用基础。
 
 
 ### 评论

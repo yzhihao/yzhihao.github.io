@@ -37,13 +37,14 @@ comments:
 * git是一个版本控制工具，是一个系统，在windows下就是一个软件。
 * github是一个用git做版本控制的项目托管平台，是一个网站。
 
-* 可以查看是一个(包括文件**上传下拉，分支操作**)[网上入门学习笔记](http://note.youdao.com/share/?id=29b306d4f3c6ac93c1f9713f7442d2a6&type=note#/)
+* 想快速入门的话可以先查看是一个(包括文件**上传下拉，分支操作**)[网上入门学习笔记](http://note.youdao.com/share/?id=29b306d4f3c6ac93c1f9713f7442d2a6&type=note#/)
 * 网上教程也有一堆，推荐的话还是廖雪峰老师的:[git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)
 
 ## 几个概念：
-* 工作区（Working Directory）：就是你在电脑里能看到的目录。
+* 工作区（Working Directory）：就是你在电脑里能看到的目录下的工作区间。
 * 版本库（Repository）：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
 * Git的版本分为两大部分，一是：称为stage（或者叫index）的暂存区；还有就是分支,创建仓库时会默认创建master分支。
+* 什么是分支：每次的提交到版本库，都有一个记录，Git都把它们串成一条时间线，这条时间线就是一个分支。在Git里，有个主分支，即master分支。
 * 当我用git add ...时，是讲工作区的提交到版本库的暂存区。
 * 当我们用git commit -m ... 时，是提交到版本库的当前分支。
 

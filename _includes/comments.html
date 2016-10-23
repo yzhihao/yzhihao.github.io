@@ -29,7 +29,7 @@
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %} -->
 
-{%if page.comments %}
+<!-- {%if page.comments %}
   {% assign sorted_comments = (page.comments | sort: 'date') %}
 {% endif %}
 {% for c in sorted_comments %}
@@ -65,7 +65,7 @@
       commentit.src = 'https://commentit.io/static/embed/dist/commentit.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
   })();
-</script>
+</script> -->
 
 <!-- 多说评论框 start -->
   <div class="ds-thread" data-thread-key="12" data-title="my blog" data-url="https://yzhihao.github.io/{{ page.path }}"></div>

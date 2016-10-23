@@ -1,6 +1,6 @@
 ---
 layout: post
-title: learning-innerclass of java（1）
+title: java内部类（一）：特点和作用
 desc: 学习java内部了
 keywords: 'blog,java,'
 date: 2016-10-23T00:00:00.000Z
@@ -24,6 +24,7 @@ icon: fa-bookmark-o
 ## 下面逐个进行讲解：
 
 ### 常规内部类或成员内部类
+
 #### 定义：
 在方法与方法之间定义的普通的一个类。
 
@@ -40,6 +41,7 @@ icon: fa-bookmark-o
 #### 作用
 >**写在前面：**下面的每一个作用我都写了demo，请移步到我的github：[常规内部类四大作用](https://github.com/yzhihao/MyJavaDemo/tree/BaseJava/src)
 >**注意：下面的四大作用分别对应文件夹：innerclass1-4**
+
 ****
 
 1. 内部类可以很好的实现隐藏。一般的非内部类，是不允许有 private 与protected权限的，但内部类可以，这样就实现了除了本身的外部类的其他类都不能访问该内部类。
@@ -126,7 +128,8 @@ public class MyMain{
 4. 局部内部类只能访问方法体中的常量，即用final修饰的成员。
 
 #### 作用：
-*　根据其特点可以得出其作用。基本上没有怎么用吧。能力有限。。。如有任何见解，可以评论，。
+
+* 根据其特点可以得出其作用。基本上没有怎么用吧。能力有限。。。如有任何见解，可以评论，。
 
 ### 匿名内部类
 

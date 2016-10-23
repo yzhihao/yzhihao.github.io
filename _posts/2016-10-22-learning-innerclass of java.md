@@ -1,5 +1,19 @@
+---
+layout: post
+title: learning-innerclass of java（1）
+desc: 学习java内部了
+keywords: 'blog,java,'
+date: 2016-10-23T00:00:00.000Z
+categories:
+  - java
+tags:
+  - java
+icon: fa-bookmark-o
+---
 
 # java内部类（一）：特点和作用
+* 目录
+{:toc}
 
 ## 先提分类
 分类：<br>
@@ -91,6 +105,164 @@ public class MyMain{
 }
 ```
 
-####  作用
-1. 静态内部类的
+####  作用：
+*  静态内部类的作用都是建立在其特点之上的，其实在大部分时间来说，还是很不常用的在网上我查过了许多。总体来说，记住他的特点。
 
+> 下面介绍几个具体作用：
+
+1. 在设计模式的单例模式中，有一种单例模式的实现是IODH，他是利用静态内部类在初始类的初始化时就加载的原理。具体什么是IODH,网上有一大把，自己查。
+2. 在某些特殊的情况下，少了这个静态内部 类还真是不行。如在进行代码程序测试的时候，如果在每一个Java源文件中都设置一个主方法(主方法是某个应用程序的入口，必须具有)，那么会出现很多额 外的代码。而且最主要的时这段主程序的代码对于Java文件来说，只是一个形式，其本身并不需要这种主方法。但是少了这个主方法又是万万不行的。在这种情 况下，就可以将主方法写入到静态内部类中，从而不用为每个Java源文件都设置一个类似的主方法。这对于代码测试是非常有用的。在一些中大型的应用程序开 发中，则是一个常用的技术手段。
+3. 在很多框架的源码或者jdk的源码中，会涉及到静态内部类的话，就要是作为工具类，然后把访问限制到最大。比如在ConcurrentHashMap 中HashEntry。
+
+### 局部内部类
+
+#### 定义：
+　　就是在方法中定义的类。
+
+#### 特点：
+1. 该内部类没有任何的访问控制权限
+2. 外围类看不见方法中的局部内部类的，但是局部内部类可以访问外围类的任何成员。
+3. 方法体中可以访问局部内部类，但是访问语句必须在定义局部内部类之后。
+4. 局部内部类只能访问方法体中的常量，即用final修饰的成员。
+
+#### 作用：
+*　根据其特点可以得出其作用。基本上没有怎么用吧。能力有限。。。如有任何见解，可以评论，。
+
+### 匿名内部类
+
+#### 定义：
+　　匿名内部类也就是没有名字的内部类，正因为没有名字，所以匿名内部类只能使用一次，它通常用来简化代码编写。但使用匿名内部类还有个前提条件：必须继承一个父类或实现一个接口。
+
+#### 特点和实例
+* 实例1:不使用匿名内部类来实现抽象方法
+
+```
+abstract class Person {
+    public abstract void eat();
+}
+
+class Child extends Person {
+    public void eat() {
+        System.out.println("eat something");
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        Person p = new Child();
+        p.eat();
+    }
+}
+运行结果：eat something
+```
+
+>可以看到，我们用Child继承了Person类，然后实现了Child的一个实例，将其向上转型为Person类的引用。
+但是，如果此处的Child类只使用一次，那么将其编写为独立的一个类岂不是很麻烦？
+这个时候就引入了匿名内部类。
+
+
+* 实例2：匿名内部类的基本实现
+
+```
+abstract class Person {
+    public abstract void eat();
+}
+ 
+public class Demo {
+    public static void main(String[] args) {
+        Person p = new Person() {
+            public void eat() {
+                System.out.println("eat something");
+            }
+        };
+        p.eat();
+    }
+}
+运行结果：eat something
+```
+
+>可以看到，我们直接将抽象类Person中的方法在大括号中实现了,这样便可以省略一个类的书写。
+
+***并且，匿名内部类还能用于接口上***
+
+* 实例3：在接口上使用匿名内部类
+
+```
+interface Person {
+    public void eat();
+}
+ 
+public class Demo {
+    public static void main(String[] args) {
+        Person p = new Person() {
+            public void eat() {
+                System.out.println("eat something");
+            }
+        };
+        p.eat();
+    }
+}
+运行结果：eat something
+```
+
+
+>由上面的例子可以看出，只要一个类是抽象的或是一个接口，那么其子类中的方法都可以使用匿名内部类来实现
+
+****
+>最常用的情况就是在多线程的实现上，因为要实现多线程必须继承Thread类或是继承Runnable接口
+
+* 实例4：Thread类的匿名内部类实现
+
+```
+public class Demo {
+    public static void main(String[] args) {
+        Thread t = new Thread() {
+            public void run() {
+                for (int i = 1; i <= 5; i++) {
+                    System.out.print(i + " ");
+                }
+            }
+        };
+        t.start();
+    }
+}
+运行结果：1 2 3 4 5
+
+```
+
+
+* 实例5：Runnable接口的匿名内部类实现
+
+```
+public class Demo {
+    public static void main(String[] args) {
+        Runnable r = new Runnable() {
+            public void run() {
+                for (int i = 1; i <= 5; i++) {
+                    System.out.print(i + " ");
+                }
+            }
+        };
+        Thread t = new Thread(r);
+        t.start();
+    }
+}
+运行结果：1 2 3 4 5
+```
+
+<!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="201610231" data-title="learning-innerclass of java（1）" data-url=""></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yzhhome"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 内部类（二）原理实现
+title: java内部类（二）：原理实现
 desc: 我的博客系统介绍
 keywords: 'blog,java,'
 date: 2016-10-23T00:00:00.000Z

@@ -46,6 +46,7 @@ WebSocket protocol 是HTML5一种新的协议。它实现了浏览器与服务�
 
 # demo的讲解
 由于在网上spring4 结合websocket的demo有点乱七八槽，很多都是错的，既然这样，那我就自己结合网上，做了一个demo。下面主要是spring结合websocket通过sock.js连接及订阅发布的讲解。
+
 >建议这个时候同时打开我在github的demo，[websocket_demo](https://github.com/yzhihao/MyJavaDemo/tree/websocket)
 
 ## 用或不用sock.js的讲解
@@ -241,9 +242,11 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
         }
     </script>
 ```
-对以上代码的 分析（Analysis）： 以上代码连接“/hello” 端点并发送 ”name“；
-1. stompClient.send("/app/hello", {}, JSON.stringify({'name':name}))： 第一个参数：json 负载消息发送的 目的地； 第二个参数：是一个头信息的Map，它会包含在 STOMP 帧中；第三个参数：负载消息；
-2. stomp client 连接地址 和 发送地址不一样的，连接地址为 <c:url value='/hello'/> ==localhost:8080/springmvc_project_name/hello , 而 发送地址为 '/app/hello'，这里要当心
+对以上代码的 分析（Analysis）：
+
+1. 以上代码连接“/hello” 端点并发送 ”name“;
+2. stompClient.send("/app/hello", {}, JSON.stringify({'name':name}))： 第一个参数：json 负载消息发送的 目的地； 第二个参数：是一个头信息的Map，它会包含在 STOMP 帧中；第三个参数：负载消息；
+3. stomp client 连接地址 和 发送地址不一样的，连接地址为 <c:url value='/hello'/> ==localhost:8080/springmvc_project_name/hello , 而 发送地址为 '/app/hello'，这里要当心
 
 ### 下面附上一张图
 

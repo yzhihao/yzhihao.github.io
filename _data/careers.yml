@@ -10,7 +10,7 @@
   job:
     detail: back-end Learner
     i18n: nextcode_job
-  icon: fa-plus-square
+  icon: fa-child
 
 - name:
     detail: Game

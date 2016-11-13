@@ -262,7 +262,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 * 在测试stomp的时候就改
 * 其实实现消息的推送和消息还有很多方式。下次会结合消息中间件activeQM来继续讲解。
 
- 
+
   <!-- 多说评论框 start -->
   <div class="ds-thread" data-thread-key="201610301" data-title="spring4+websocket" data-url=""></div>
 <!-- 多说评论框 end -->

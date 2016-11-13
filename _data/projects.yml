@@ -6,6 +6,6 @@
 
 - name: 'library'
   i18n: 'library'
-  url: '/yzhihao/python_spier/com.topview.library'
+  url: '/yzhihao/com.topview.library'
   img: 'static/img/landing/saplatform.png'
   desc: "In older to  enter into TopView studio,I develop this project."

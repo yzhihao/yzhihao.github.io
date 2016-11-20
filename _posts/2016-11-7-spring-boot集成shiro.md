@@ -9,7 +9,7 @@ categories:
 tags:
   - java
   - framework
-icon: fa-bookmark-o
+icon: icon-java
 ---
 
 

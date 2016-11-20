@@ -18,3 +18,6 @@
 
 - name: Life
   href: '/life/'
+
+- name: database
+  href: '/database/'

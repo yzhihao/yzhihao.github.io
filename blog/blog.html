@@ -53,7 +53,7 @@ permalink: /blog/
 		{% endfor %}
 		{% if paginator.total_pages > 1 %}
 		<!-- 分页代码 -->
-		{% endif %}
+
 		{% if paginator.previous_page %}
 		    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"上一页</a>
 		{% endif %}
@@ -69,6 +69,8 @@ permalink: /blog/
 		{% if paginator.next_page %}
 		    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
 		{% endif %}
+		{% endif %}
+		
 		  </div>
 
 

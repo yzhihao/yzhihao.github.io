@@ -1,6 +1,6 @@
 {
   "website":{
-    "title": "叶志豪的博客"
+    "title": "Evan的博客"
   },
   "nav":{
     "home": "首页",
@@ -26,15 +26,15 @@
   "career":{
     "my_career": "成长路上",
     "nextcode": "经历",
-    "nextcode_des": "现在我在Topview工作室学习做项目。我是属于后台组的",
+    "nextcode_des": "现在我在Topview工作室学习做项目。我是属于机器学习组的，加入我一起学吧！",
     "nextcode_date": "现在",
-    "nextcode_job": "后端学习中",
+    "nextcode_job": "机器学习学习中",
     "netease": "游戏",
-    "netease_des": "在我无聊，或者不开心的时候，我会玩一个叫做实况的电脑足球游戏.",
+    "netease_des": "在我无聊，或者不开心的时候，我会玩一个叫做实况的电脑足球游戏.最近，我也玩一款叫做王者荣耀的手游",
     "netease_date": "现在",
     "netease_job": "一起玩耍",
     "ucloud": "未来",
-    "ucloud_des": "在未来我想做一个厉害的计算机工程师，并在世界到处看看，认识更多朋友",
+    "ucloud_des": "在未来我想做一个厉害的机器学习工程师，并在世界到处看看，认识更多朋友",
     "ucloud_date": "在路上",
     "ucloud_job": "梦想还是要有的",
     "college": "学习",

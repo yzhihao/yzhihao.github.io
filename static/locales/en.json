@@ -1,6 +1,6 @@
 {
   "website":{
-    "title": "yzh's blog"
+    "title": "Evan's blog"
   },
   "nav":{
     "home": "Home",
@@ -26,15 +26,15 @@
   "career":{
     "my_career": "My Life",
     "nextcode": "experience",
-    "nextcode_des": "Now I am in TopView Studio and I am a back-end Learner.",
+    "nextcode_des": "Now I am in TopView Studio and I am a Machine Learning Learner.Welcome to join me and learning together",
     "nextcode_date": "2016-",
-    "nextcode_job": "back-end Learner",
+    "nextcode_job": "Machine Learning Learner",
     "netease": "Game",
-    "netease_des": "In the boring time, or when the mood is not good, I will play football game whose name is ShiKuang.",
+    "netease_des": "In the boring time, or when the mood is not good, I will play football game whose name is ShiKuang.Recently,I also play a mobile game whose name is king glory.",
     "netease_date": "hobby",
     "netease_job": "my Game",
     "ucloud": "Future",
-    "ucloud_des": "In the future, I hope to become a  network  engineer and can travel around the world.I hope that I can meet more friend.",
+    "ucloud_des": "In the future, I hope to become a  Machine Learning engineer and can travel around the world.I hope that I can meet more friend.",
     "ucloud_date": "In The Future",
     "ucloud_job": "me",
     "college": "College",

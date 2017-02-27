@@ -1,5 +1,5 @@
 - name: Blog
-  href: '/blog/index.html'
+  href: '/blog/'
 
 - name: Python
   href: '/python/'

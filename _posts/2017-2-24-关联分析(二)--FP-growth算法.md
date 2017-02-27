@@ -1,3 +1,26 @@
+---
+layout: post
+title: 关联分析(二)--FP-growth算法
+desc: 我的博客
+keywords: 'blog,Machine Learning,AI'
+date: 2017-2-24T00:00:00.000Z
+categories:
+  - Machine Learning
+tags:
+  - Machine Learning
+  - AI
+icon: fa-book
+---
+
+
+## 目录
+**欢迎在文章下方评论，建议用电脑看**
+
+* 目录
+{:toc}
+
+
+
 ## 关联分析(二)--FP-growth算法
 
 FP-growth算法将数据存储在一种称为FP树的紧凑数据结构中。FP（Frequent Pattern）通过链接来连接相似元素，被连起来的元素项可以看成一个链表。
@@ -68,4 +91,59 @@ FP-growth算法首先构建FP树，然后利用它来挖掘频繁项集。为构
 根据FP-growth算法，最终得到的支持度>2频繁模式如下：
 
 * FP-growth算法比Apriori算法快一个数量级，在空间复杂度方面也比Apriori也有数量级级别的优化。但是对于海量数据，FP-growth的时空复杂度仍然很高，可以采用的改进方法包括数据库划分，数据采样等等。
+
+参考资料：
+
+
+
+
+
+《统计学习方法》-李航<br>
+
+《机器学习》-周志华<br>
+
+《机器学习实战》-Peter Harrington<br>
+
+斯坦福大学公开课-机器学习<br>
+
+网上的各位大牛的博文<br>
+
+
+
+  <!-- 多说评论框 start -->
+
+  <div class="ds-thread" data-thread-key="201702245" data-title="FP-growth" data-url=""></div>
+
+<!-- 多说评论框 end -->
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+<script type="text/javascript">
+
+var duoshuoQuery = {short_name:"yzhhome"};
+
+  (function() {
+
+    var ds = document.createElement('script');
+
+    ds.type = 'text/javascript';ds.async = true;
+
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+
+    ds.charset = 'UTF-8';
+
+    (document.getElementsByTagName('head')[0] 
+
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+
+  })();
+
+  </script>
+
+
+
+
+
+
+
 * [FP树的例子](http://blog.csdn.net/lmm2003/article/details/6882737)

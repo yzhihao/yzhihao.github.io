@@ -1,10 +1,9 @@
 ---
 layout: blog
 title: Blog
-permalink: /blog/
 ---
 
-
+ <!--
 <div class="row">
     <div class="col-lg-12 text-center">
         <div class="navy-line"></div>
@@ -16,7 +15,7 @@ permalink: /blog/
     <div class="col-lg-8 col-lg-offset-2">
         <div class="wrapper wrapper-content animated fadeInRight">
 
-            <!-- latest 10 blog -->
+         latest 10 blog 
 			{% for post in site.posts limit:10 %}
             <div class="vote-item">
                 <div class="row">
@@ -44,7 +43,33 @@ permalink: /blog/
                     </div>
                 </div>
             </div>
-            {% endfor %}
+            {% endfor %}-->
+
+<!-- 遍历分页后的文章 -->
+{% for post in paginator.posts %}
+<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+<p class="author">
+<span class="date">{{ post.date }}</span>
+</p>
+<div class="content">
+{{ post.content }}
+</div>
+{% endfor %}
+
+<!-- 分页链接 -->
+<div class="pagination">
+{% if paginator.previous_page %}
+<a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+{% else %}
+<span class="previous">Previous</span>
+{% endif %}
+<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+{% if paginator.next_page %}
+<a href="/page{{ paginator.next_page }}" class="next">Next</a>
+{% else %}
+<span class="next ">Next</span>
+{% endif %}
+</div>
 
             <!-- 分页代码 -->
 		<!--<div id="post-pagination" class="pagination">
@@ -73,7 +98,7 @@ permalink: /blog/
 -->
 		
 
-
+    <!-- 
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
@@ -108,4 +133,4 @@ permalink: /blog/
 
 
 </div>
-
+-->

@@ -35,3 +35,10 @@ icon: fa-book
 
 ## adam
 
+<img src="{{ site.img_path }}/Machine Learning/adam1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+<img src="{{ site.img_path }}/Machine Learning/adam2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+<img src="{{ site.img_path }}/Machine Learning/adam3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+<img src="{{ site.img_path }}/Machine Learning/adam4.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>

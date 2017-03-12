@@ -26,11 +26,8 @@ icon: fa-book
 **论文原文：**
 
 <img src="{{ site.img_path }}/Machine Learning/momentum1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-
-<img src="{{ site.img_path }}/Machine Learning/momentum3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-
 <img src="{{ site.img_path }}/Machine Learning/momentum2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-
+<img src="{{ site.img_path }}/Machine Learning/momentum3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 <img src="{{ site.img_path }}/Machine Learning/momentum4.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 ## adam

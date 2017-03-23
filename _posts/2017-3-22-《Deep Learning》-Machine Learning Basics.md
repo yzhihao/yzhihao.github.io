@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 理解word2woc
+title: 《Deep Learning》-Machine Learning Basics
 desc: 我的博客
 keywords: 'blog,Machine Learning,AI'
-date: 2017-3-12T00:00:00.000Z
+date: 2017-3-23T00:00:00.000Z
 categories:
   - Machine Learning
 tags:
@@ -49,7 +49,7 @@ icon: fa-book
 那流形学习是什莫呢？为了好懂，我尽可能应用少的数学概念来解释这个东西。所谓流形（manifold）就是一般的几何对象的总称。比如人，有中国人、美国人等等；流形就包括各种维数的曲线曲面等。和一般的降维分析一样，流形学习把一组在高维空间中的数据在低维空间中重新表示。和以往方法不同的是，在流形学习中有一个假设，就是所处理的数据采样于一个潜在的流形上，或是说对于这组数据存在一个潜在的流形。对于不同的方法，对于流形性质的要求各不相同，这也就产生了在流形假设下的各种不同性质的假设，比如在Laplacian Eigenmaps中要假设这个流形是紧致黎曼流形等。对于描述流形上的点，我们要用坐标，而流形上本身是没有坐标的，所以为了表示流形上的点，必须把流形放入外围空间（ambient space）中，那末流形上的点就可以用外围空间的坐标来表示。比如R^3中的球面是个2维的曲面，因为球面上只有两个自由度，但是球面上的点一般是用外围R^3空间中的坐标表示的，所以我们看到的R^3中球面上的点有3个数来表示的。当然球面还有柱坐标球坐标等表示。对于R^3中的球面来说，那末流形学习可以粗略的概括为给出R^3中的表示，在保持球面上点某些几何性质的条件下，找出找到一组对应的内蕴坐标（intrinsic coordinate）表示，显然这个表示应该是两维的，因为球面的维数是两维的。这个过程也叫参数化（parameterization）。直观上来说，就是把这个球面尽量好的展开在通过原点的平面上。在PAMI中，这样的低维表示也叫内蕴特征（intrinsic feature）。一般外围空间的维数也叫观察维数，其表示也叫自然坐标（外围空间是欧式空间）表示,在统计中一般叫observation。
 
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="2017031201" data-title=" word2woc" data-url=""></div>
+  <div class="ds-thread" data-thread-key="2017032301" data-title=" 《Deep Learning》-Machine Learning Basics" data-url=""></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

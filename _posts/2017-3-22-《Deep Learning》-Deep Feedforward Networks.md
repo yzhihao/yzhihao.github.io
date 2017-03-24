@@ -39,6 +39,29 @@ To extend linear models to represent nonlinear functions of x, we can apply the 
 1. One option is to use a very generic φ, such as the infinite-dimensional φ that is implicitly used by kernel machines based on the RBF kernel. If φ(x) is of high enough dimension, we can always have **enough capacity to fit the training set(advantage)**, but **generalization to the test set often remains poor(disadvange,by overfitting)**. Very generic feature mappings are usually based only on the principle of local smoothness and do not encode enough prior information to solve advanced problems.
 2. Another option is to manually engineer φ . Until the advent of deep learning, this was the dominant approach. This approach requires decades of human effort for each separate task, with practitioners specializing in different domains such as speech recognition or computer vision, and with little transfer between domains.
 
+<img src="{{ site.img_path }}/Machine Learning/nonlinear.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+## activation function
+
+**q：Why we need activation function？**
+a:
+<img src="{{ site.img_path }}/Machine Learning/activation function.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+**q:Why ReLU is the default activation function recommended for use with most feedforward neural networks.**
+a：
+<img src="{{ site.img_path }}/Machine Learning/ReLU1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+## Cost Functions
+
+mean squared error and mean absolute error often lead to poor results when used with gradient-based optimization. Some output units that saturate produce very small gradients when combined with these cost functions. This is one reason that the cross-entropy cost function is more popular than mean squared error or mean absolute error, even when it is not necessary to estimate an entire distribution p( y | x ) .
+
+## Regularization
+
+Regularization of an estimator works by trading increased bias for reduced variance.
+
+
+### why we do not need to leavesthe biases unregularized
+Before delving into the regularization behavior of different norms, we note that for neural networks, we typically choose to use a parameter norm penalty Ω that penalizes only the weights of the affine transformation at each layer and leaves the biases unregularized. The biases typically require less data to fit accurately than the weights. **Each weight specifies how two variables interact. Fitting the weight well requires observing both variables in a variety of conditions. Each bias controls only a single variable. This means that we do not induce too much variance by leaving the biases unregularized. Also, regularizing the bias parameters can introduce a significant amount of underfitting.** We therefore use the vector **w** to indicate all of the weights that should be affected by a norm penalty, while the vector **θ** denotes all of the parameters, including both w and the unregularized parameters.
 
   <!-- 多说评论框 start -->
   <div class="ds-thread" data-thread-key="2017032401" data-title=" 《Deep Learning》-Deep Feedforward Networks" data-url=""></div>

@@ -34,7 +34,7 @@ icon: fa-book
 
 <img src="{{ site.img_path }}/Machine Learning/lstm.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-<img src="{{ site.img_path }}/Machine Learning/lstm1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/lstm2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
   <!-- 多说评论框 start -->
   <div class="ds-thread" data-thread-key="2017031701" data-title="cs224d-rnn,gru,lstm" data-url=""></div>

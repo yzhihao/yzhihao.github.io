@@ -76,6 +76,11 @@ Their use as output units is compatible with the use of gradient-based learning 
 
 In these chain-based architectures, the main architectural considerations are to choose the depth of the network and the width of each layer. As we will see,a network with even one hidden layer is sufficient to fit the training set. Deeper networks often are able to use far fewer units per layer and far fewer parameters and often generalize to the test set, but are also often harder to optimize. The ideal network architecture for a task must be found via experimentation guided by monitoring the validation set error.
 
+### Multi-Task Learning
+
+Multi-task learning ( Caruana , 1993 ) is a way to improve generalization by pooling the examples (which can be seen as soft constraints imposed on the parameters) arising out of several tasks. In the same way that additional training examples put more pressure on the parameters of the model towards values that generaliz well, when part of a model is shared across tasks, that part of the model is more constrained towards good values (assuming the sharing is justified), often yielding better generalization.
+
+<img src="{{ site.img_path }}/Machine Learning/mutitask.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 ### linear model
 
@@ -83,7 +88,7 @@ A linear model, mapping from features to outputs via matrix multiplication, canb
 
 ## deeper is better
 
-<img src="{{ site.img_path }}/Machine Learning/webwxgetmsgimg.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/webwxgetmsgimg.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 a feedforward network with a single layer is sufficient to represent any function, but the layer may be infeasibly large and may fail to learn and generalize correctly. In many circumstances, using deeper models can reduce the number of units required to represent the desired function and can reduce the amount of generalization error
 

@@ -51,4 +51,6 @@ var duoshuoQuery = {short_name:"yzhhome"};
      || document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
   </script>
+  
+两宴书长，一与家天斜。出寒看阶帆，竺却参雴飞。
 

@@ -28,7 +28,7 @@ icon: fa-book
 
 In the batch setting where each training step is based on the entire training set, we would use the whole set to nor malize activations. However, this is impractical when using stochastic optimization. Therefore, we make the sec-
 ond simplification: since we use mini-batches in stochastic gradient training, each mini-batch produces estimates
-of the mean and variance of each activation. This way, the statistics used for normalization can fully participate in the gradient backpropagation. Note that the use of mini batches is enabled by computation of per-dimension vari- ances rather than joint covariances; in the joint case, regularization would be required since the mini-batch size is likely to be smaller than the number of activations being whitened, resulting in singular covariance matrices.
+of the mean and variance of each activation. This way, **the statistics used for normalization can fully participate in the gradient backpropagation. Note that the use of mini batches is enabled by computation of per-dimension vari- ances rather than joint covariances; in the joint case, regularization would be required since the mini-batch size is likely to be smaller than the number of activations being whitened, resulting in singular covariance matrices.**
 
 <img src="{{ site.img_path }}/Machine Learning/Batch Normalizing1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
@@ -36,10 +36,13 @@ of the mean and variance of each activation. This way, the statistics used for n
 
 Using moving averages instead, we can track the accuracy of a model as it trains. Since the means and variances are fixed during inference, the normalization is simply a linear transform applied to each activation. It may further be composed with the scaling by γ and shift by β, to yield a single linear transform that replaces BN(x). Algorithm 2 summarizes the procedure for training batch-normalized networks.
 
+<img src="{{ site.img_path }}/Machine Learning/Batch Normalizing2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
 ## Batch Normalization enables higher learning rate
 Batch Normalization helps address these issues. **By normalizing activations throughout the network, it prevents small changes to the parameters from amplifying into larger and suboptimal changes in activations in gradients**; for instance, it prevents the training from getting stuck in the saturated regimes of nonlinearities.
 
-<img src="{{ site.img_path }}/Machine Learning/Batch Normalizing2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 
 
 # dropout

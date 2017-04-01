@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 集成学习(一)--Boosting
+title: 集成学习(一)_Boosting
 desc: 我的博客
 keywords: 'blog,Machine Learning,AI'
 date: 2017-2-11T00:00:00.000Z

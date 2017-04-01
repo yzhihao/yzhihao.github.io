@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 总目录--机器学习博文（笔记）
+title: 顶！总目录--机器学习博文（笔记）
 desc: 我的博客
 keywords: 'blog,Machine Learning,AI'
 date: 2222-2-22T00:00:00.000Z
@@ -42,9 +42,21 @@ icon: fa-book
 
 (2):[机器学习有关的数学基础知识-概率](https://yzhihao.github.io/machine%20learning/2017/02/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%89%E5%85%B3%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%A6%82%E7%8E%87.html)
 
-## 有监督学习
+>此外，机器学习中也用了挺多高数导数的知识，比如BP算法等，在这里就不详细介绍了，等讲到相应的算法会进行讲述。
 
-## 无监督学习
+(3):[特征工程，模型评价与选择（一）](https://yzhihao.github.io/machine%20learning/2017/01/18/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%B8%80.html)
+
+(4):[特征工程，模型评价（二）](https://yzhihao.github.io/machine%20learning/2017/02/11/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%BA%8C.html)
+
+## 有监督/无监督学习，关联分析等
+
+(1):[线性回归](https://yzhihao.github.io/machine%20learning/2017/02/16/%E5%9B%9E%E5%BD%92-%E7%AE%80%E5%8D%95%E5%88%86%E7%B1%BB.html)
+
+(2):[一般线性模型](https://yzhihao.github.io/machine%20learning/2017/02/17/%E4%B8%80%E8%88%AC%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B.html)
+
+(3):[决策树](https://yzhihao.github.io/machine%20learning/2017/02/18/%E5%86%B3%E7%AD%96%E6%A0%91.html)
+
+(4):[支持向量机（SVM）](https://yzhihao.github.io/machine%20learning/2017/03/25/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA.html)
 
 ## 强化学习
 
@@ -60,7 +72,9 @@ icon: fa-book
 
 (5):[recurrent neural network](https://yzhihao.github.io/2017/03/12/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html)
 
-(6):[Generative Adversarial networks]()
+(6):[Generative Adversarial networks](https://yzhihao.github.io/machine%20learning/2017/03/14/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C.html)
+
+()[sa](https://yzhihao.github.io/machine%20learning/2017/02/11/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0(%E4%B8%80)-Boosting.html)
 
 
 ## 论文笔记

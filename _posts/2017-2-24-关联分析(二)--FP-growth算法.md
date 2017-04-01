@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 关联分析(二)--FP-growth算法
+title: 关联分析(二)_FP-growth算法
 desc: 我的博客
 keywords: 'blog,Machine Learning,AI'
 date: 2017-2-24T00:00:00.000Z

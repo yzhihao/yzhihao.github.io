@@ -56,7 +56,11 @@ icon: fa-book
 
 (3):[convolution neural network](https://yzhihao.github.io/machine%20learning/2017/03/18/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html)
 
-(4):
+(4):[word2woc](https://yzhihao.github.io/machine%20learning/2017/03/12/Word2Vec.html)
+
+(5):[recurrent neural network](https://yzhihao.github.io/2017/03/12/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html)
+
+(6):[Generative Adversarial networks]()
 
 
 ## 论文笔记

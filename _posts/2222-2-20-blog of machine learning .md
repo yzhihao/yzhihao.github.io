@@ -74,7 +74,10 @@ icon: fa-book
 
 (6):[Generative Adversarial networks](https://yzhihao.github.io/machine%20learning/2017/03/14/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C.html)
 
-()[sa](https://yzhihao.github.io/machine%20learning/2017/02/11/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0(%E4%B8%80)-Boosting.html)
+(7):[集成学习(一)--Boosting](https://yzhihao.github.io/machine%20learning/2017/02/11/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0(%E4%B8%80)-Boosting.html)
+
+(8):[集成学习(二)--Bagging](https://yzhihao.github.io/machine%20learning/2017/02/11/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0(%E4%B8%80)-Boosting.html)
+
 
 
 ## 论文笔记

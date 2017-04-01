@@ -48,8 +48,12 @@ icon: fa-book
 
 ## 强化学习
 
-
 ## 深度学习
+
+(1):[神经网络-基本概念](https://yzhihao.github.io/2017/03/13/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html)
+
+(2):[神经网络-BP，更新参数策略](https://yzhihao.github.io/2017/03/13/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-BP%E5%92%8C%E5%AF%BB%E6%89%BE%E6%9C%80%E4%BC%98%E5%8C%96.html)
+
 
 ## 论文笔记
 
@@ -59,17 +63,17 @@ icon: fa-book
 
 这是一个关于自然语言处理的深度学习教程，很值得一看！下面是关于这个课程的一些笔记和我的观点！
 
-[cs224d-word Vectors](https://yzhihao.github.io/machine%20learning/2017/03/15/cs224d.html)
+(1): [cs224d-word Vectors](https://yzhihao.github.io/machine%20learning/2017/03/15/cs224d.html)
 
-[cs224d-neuro network](https://yzhihao.github.io/machine%20learning/2017/03/16/cs224d_neuro-network.html)
+(2):[cs224d-neuro network](https://yzhihao.github.io/machine%20learning/2017/03/16/cs224d_neuro-network.html)
 
-[cs224d-rnn,gru,lstm](https://yzhihao.github.io/machine%20learning/2017/03/17/cs224d_RNN,GRU,LSTM.html)
+(3):[cs224d-rnn,gru,lstm](https://yzhihao.github.io/machine%20learning/2017/03/17/cs224d_RNN,GRU,LSTM.html)
 
-[cs224d-Recursive Neural Networks](https://yzhihao.github.io/machine%20learning/2017/03/17/Recursive-Neural-Networks.html)
+(4):[cs224d-Recursive Neural Networks](https://yzhihao.github.io/machine%20learning/2017/03/17/Recursive-Neural-Networks.html)
 
-[cs224d-cnn in nlp](https://yzhihao.github.io/machine%20learning/2017/03/18/cnn-in-nlp.html)
+(5):[cs224d-cnn in nlp](https://yzhihao.github.io/machine%20learning/2017/03/18/cnn-in-nlp.html)
 
-[Cs224d_state of the art](https://yzhihao.github.io/2017/03/19/cs224d_state-of-the-art.html)
+(6):[Cs224d_state of the art](https://yzhihao.github.io/2017/03/19/cs224d_state-of-the-art.html)
 
 
 最后，学习，最终要的是思考，深入的去思考！加油，前行！

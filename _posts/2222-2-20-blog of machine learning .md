@@ -58,6 +58,22 @@ icon: fa-book
 
 (4):[支持向量机（SVM）](https://yzhihao.github.io/machine%20learning/2017/03/25/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA.html)
 
+(5):[生成，判别模型-贝叶斯分类](https://yzhihao.github.io/machine%20learning/2017/03/12/%E7%94%9F%E6%88%90-%E5%88%A4%E5%88%AB%E6%A8%A1%E5%9E%8B-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB.html)
+
+(6):[排序算法-ListNet原理](https://yzhihao.github.io/machine%20learning/2017/02/22/ListNet%E5%8E%9F%E7%90%86.html)
+
+(7):[集成学习(一)--Boosting](https://yzhihao.github.io/machine%20learning/2017/02/11/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0_Boosting.html)
+
+(8):[集成学习(二)--Bagging](https://yzhihao.github.io/machine%20learning/2017/02/11/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0_Bagging.html)
+
+(9):[关联分析（一）Apriori](https://yzhihao.github.io/machine%20learning/2017/02/23/%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90apriori.html)
+
+(10):[关联分析(二) FP-growth算法](https://yzhihao.github.io/machine%20learning/2017/02/24/%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90-FP-growth%E7%AE%97%E6%B3%95.html)
+
+(11):[EM算法](https://yzhihao.github.io/machine%20learning/2017/02/21/EM%E7%AE%97%E6%B3%95.html)
+
+(12):[简单聚类](https://yzhihao.github.io/machine%20learning/2017/02/25/%E7%AE%80%E5%8D%95%E8%81%9A%E7%B1%BB.html)
+
 ## 强化学习
 
 ## 深度学习
@@ -74,13 +90,24 @@ icon: fa-book
 
 (6):[Generative Adversarial networks](https://yzhihao.github.io/machine%20learning/2017/03/14/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C.html)
 
-(7):[集成学习(一)--Boosting](https://yzhihao.github.io/machine%20learning/2017/02/11/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0(%E4%B8%80)-Boosting.html)
 
-(8):[集成学习(二)--Bagging](https://yzhihao.github.io/machine%20learning/2017/02/11/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0(%E4%B8%80)-Boosting.html)
 
 
 
 ## 论文笔记
+
+(1):[paper-ImageNet](https://yzhihao.github.io/machine%20learning/2017/02/24/paper-ImageNet.html)
+
+(2):[paper-Optimization](https://yzhihao.github.io/machine%20learning/2017/03/11/paper-Optimization.html)
+
+(3):[paper-GAN](https://yzhihao.github.io/machine%20learning/2017/02/24/paper-GAN.html)
+
+(4):[paper about batch normalization and dropout](https://yzhihao.github.io/machine%20learning/2017/03/29/Batch-Normalization-and-dropout.html)
+
+(5):[Paper about Very Deep Convolutional Networks for Text Classification](https://yzhihao.github.io/machine%20learning/2017/03/31/paper-about-Very-Deep-Convolutional-Networks.html)
+
+(6):[paper about Sequence to Sequence Learning with Neural Networks](https://yzhihao.github.io/machine%20learning/2017/03/29/Sequence-to-Sequence-Learning.html)
+
 
 ## 学习笔记
 
@@ -99,6 +126,17 @@ icon: fa-book
 (5):[cs224d-cnn in nlp](https://yzhihao.github.io/machine%20learning/2017/03/18/cnn-in-nlp.html)
 
 (6):[Cs224d_state of the art](https://yzhihao.github.io/2017/03/19/cs224d_state-of-the-art.html)
+
+### book-《deep learning》，《neural network and deep learning》
+
+(1):[《Deep Learning》-Machine Learning Basics](https://yzhihao.github.io/machine%20learning/2017/03/23/Deep-Learning-Machine-Learning-Basics.html)
+
+(2):[《Deep Learning》-Deep Feedforward Networks](https://yzhihao.github.io/machine%20learning/2017/03/24/Deep-Learning-Deep-Feedforward-Networks.html)
+
+(3):[《Deep Learning》-cnn and rnn](https://yzhihao.github.io/machine%20learning/2017/03/24/Deep-Learning-cnn-and-rnn.html)
+
+(4):[《Deep Learning》-representation learning]()
+
 
 
 最后，学习，最终要的是思考，深入的去思考！加油，前行！

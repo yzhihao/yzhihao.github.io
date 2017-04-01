@@ -1,6 +1,27 @@
+---
+layout: post
+title: 《Deep Learning》-representation learning
+desc: 我的博客
+keywords: 'blog,Machine Learning,AI'
+date: 2017-3-26T00:00:00.000Z
+categories:
+  - Machine Learning
+tags:
+  - Machine Learning
+  - AI
+icon: fa-book
+---
+
+
+## 目录
+**欢迎在文章下方评论，建议用电脑看**
+
+* 目录
+{:toc}
+
 ## representation learning
 
-## deep neural network and representation learning
+##  representation learning
 
 We can think of feedforward networks trained by supervised learning as performing a kind of representation learning. Specifically, the last layer of the network is typically a linear classifier, such as a softmax regression classifier. The rest  of the network learns to provide a representation to this classifier. Training with a supervised criterion naturally leads to the representation at every hidden layer (but more so near the top hidden layer) taking on properties that make the classification task easier. For example, classes that were not linearly separable in the input features may become linearly separable in the last hidden layer. In principle, the last layer could be another kind of model, such as a nearest neighbor classifier (Salakhutdinov and Hinton , 2007a ). The features in the penultimate layer should learn different properties depending on the type of the last layer.
 

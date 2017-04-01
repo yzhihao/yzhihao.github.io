@@ -38,9 +38,9 @@ icon: fa-book
 # 目录
 
 ## 基础
-[机器学习有关的数学基础知识-线代](https://yzhihao.github.io/machine%20learning/2017/02/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%89%E5%85%B3%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%BA%BF%E4%BB%A3.html)
+(1):[机器学习有关的数学基础知识-线代](https://yzhihao.github.io/machine%20learning/2017/02/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%89%E5%85%B3%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E7%BA%BF%E4%BB%A3.html)
 
-[机器学习有关的数学基础知识-概率](https://yzhihao.github.io/machine%20learning/2017/02/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%89%E5%85%B3%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%A6%82%E7%8E%87.html)
+(2):[机器学习有关的数学基础知识-概率](https://yzhihao.github.io/machine%20learning/2017/02/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%89%E5%85%B3%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%A6%82%E7%8E%87.html)
 
 ## 有监督学习
 
@@ -53,6 +53,10 @@ icon: fa-book
 (1):[神经网络-基本概念](https://yzhihao.github.io/2017/03/13/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html)
 
 (2):[神经网络-BP，更新参数策略](https://yzhihao.github.io/machine%20learning/2017/03/12/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-BP%E5%92%8C%E5%AF%BB%E6%89%BE%E6%9C%80%E4%BC%98%E5%8C%96.html)
+
+(3):[convolution neural network](https://yzhihao.github.io/machine%20learning/2017/03/18/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html)
+
+(4):
 
 
 ## 论文笔记

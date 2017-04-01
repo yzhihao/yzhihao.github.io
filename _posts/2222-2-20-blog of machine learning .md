@@ -29,7 +29,8 @@ icon: fa-book
 从上学期11月中旬吧，入机器学习的坑以来，一直是在学习，很多时候是很骄傲的，因为这个方向够高大上，一直都是这样想的。虽然现实可能并不是这样，人工智能也是经过多次大起大落，在2012年（不准确）以来由于深度学习的出现，而又一次的大火，不知道这次会火多久，希望是一直下去，但不管它火多久，反正内心那学习的火要一直火就行了。
 
 下面介绍一下机器学习吧！先上一个图：
-![](https://pic3.zhimg.com/v2-80aca2b9a5b8daf46ad8d9aa568a366a_b.jpg)
+
+<img src="{{ site.img_path }}/Machine Learning/the title.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 最简单的理解，就是看上面的图了，在我们常说的机器学习是AI中的一个分支，而现在非常火的深度学习是机器学习的分支，其实深度学习就是深度神经网络，只不过由于end-to-end（end-to-end就是构建一个整体的系统，输入是最原始素材（比如图像分类就是原始图像），中间经过系统自身的处理（卷积和池化等操作），最后是分类任务（分类器）。这样的系统从头至尾不受人的干预，当然卷积等操作中的参数还是hyperparameter，这个还暂时没办法自行学习。）的思想，不用经过很多如降维之类预处理了，其实还是神经网络。
 
@@ -86,7 +87,7 @@ icon: fa-book
 
 (4):[word2woc](https://yzhihao.github.io/machine%20learning/2017/03/12/Word2Vec.html)
 
-(5):[recurrent neural network](https://yzhihao.github.io/2017/03/12/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html)
+(5):[recurrent neural network](https://yzhihao.github.io/machine%20learning/2017/03/12/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.html)
 
 (6):[Generative Adversarial networks](https://yzhihao.github.io/machine%20learning/2017/03/14/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C.html)
 
@@ -129,17 +130,20 @@ icon: fa-book
 
 ### book-《deep learning》，《neural network and deep learning》
 
+在入门deep learning的时候，非常推荐的是《neural network and deep learning》这本书，这本书中用简单的minist手写任务来通俗的讲解。然后在需要理论积累的时候，就非常推荐《deep learning》这本书，特别是part2部分，被很多人所称赞！
+
+
 (1):[《Deep Learning》-Machine Learning Basics](https://yzhihao.github.io/machine%20learning/2017/03/23/Deep-Learning-Machine-Learning-Basics.html)
 
 (2):[《Deep Learning》-Deep Feedforward Networks](https://yzhihao.github.io/machine%20learning/2017/03/24/Deep-Learning-Deep-Feedforward-Networks.html)
 
 (3):[《Deep Learning》-cnn and rnn](https://yzhihao.github.io/machine%20learning/2017/03/24/Deep-Learning-cnn-and-rnn.html)
 
-(4):[《Deep Learning》-representation learning]()
+(4):[《Deep Learning》-representation learning](https://yzhihao.github.io/machine%20learning/2017/03/26/Representation-Learning.html)
 
 
 
-最后，学习，最终要的是思考，深入的去思考！加油，前行！
+**最后，学习，最重要的是思考，深入的去思考！加油，前行！**
 
   <!-- 多说评论框 start -->
   <div class="ds-thread" data-thread-key="201702221" data-title="AI_note" data-url=""></div>

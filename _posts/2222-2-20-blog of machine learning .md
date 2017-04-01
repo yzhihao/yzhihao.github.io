@@ -52,7 +52,7 @@ icon: fa-book
 
 (1):[神经网络-基本概念](https://yzhihao.github.io/2017/03/13/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html)
 
-(2):[神经网络-BP，更新参数策略](https://yzhihao.github.io/2017/03/13/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-BP%E5%92%8C%E5%AF%BB%E6%89%BE%E6%9C%80%E4%BC%98%E5%8C%96.html)
+(2):[神经网络-BP，更新参数策略](https://yzhihao.github.io/machine%20learning/2017/03/12/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-BP%E5%92%8C%E5%AF%BB%E6%89%BE%E6%9C%80%E4%BC%98%E5%8C%96.html)
 
 
 ## 论文笔记

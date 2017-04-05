@@ -26,7 +26,11 @@
         <!-- avatar -->
         <div class="col-xs-4">
             <div class="team-member wow zoomIn">
+                
+                <a href="{{ site.author.mylove | prepend: site.baseurl }}">
                 <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
+                </a>
+                
                 <h4><span class="navy">{{ site.author.last_name }}</span> {{ site.author.first_name }}</h4>
                 <ul class="list-inline social-icon">
                     <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>

@@ -64,7 +64,7 @@ mean squared error and mean absolute error often lead to poor results when used 
 Regularization of an estimator works by trading increased bias for reduced variance.
 
 
-### why we do not need to leavesthe biases unregularized
+### why we do not need to leaves the biases regularized
 
 Before delving into the regularization behavior of different norms, we note that for neural networks, we typically choose to use a parameter norm penalty Ω that penalizes only the weights of the affine transformation at each layer and leaves the biases unregularized. The biases typically require less data to fit accurately than the weights. **Each weight specifies how two variables interact. Fitting the weight well requires observing both variables in a variety of conditions. Each bias controls only a single variable. This means that we do not induce too much variance by leaving the biases unregularized. Also, regularizing the bias parameters can introduce a significant amount of underfitting.** We therefore use the vector **w** to indicate all of the weights that should be affected by a norm penalty, while the vector **θ** denotes all of the parameters, including both w and the unregularized parameters.
 

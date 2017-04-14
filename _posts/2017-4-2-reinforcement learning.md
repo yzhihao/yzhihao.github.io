@@ -72,6 +72,8 @@ State is the information used to determine what happens next 。Formally, state 
 
 ## Observable Environments
 
+**MDP描述了强化学习的environment，且是fully Observable的**
+
 ### Fully Observable Environments:
 
 Full observability: agent directly observes environment state ，i.e :Agent state = environment state = information state。Formally, this is a **Markov decision process (MDP)**

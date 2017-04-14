@@ -68,6 +68,10 @@ Regularization of an estimator works by trading increased bias for reduced varia
 
 Before delving into the regularization behavior of different norms, we note that for neural networks, we typically choose to use a parameter norm penalty Ω that penalizes only the weights of the affine transformation at each layer and leaves the biases unregularized. The biases typically require less data to fit accurately than the weights. **Each weight specifies how two variables interact. Fitting the weight well requires observing both variables in a variety of conditions. Each bias controls only a single variable. This means that we do not induce too much variance by leaving the biases unregularized. Also, regularizing the bias parameters can introduce a significant amount of underfitting.** We therefore use the vector **w** to indicate all of the weights that should be affected by a norm penalty, while the vector **θ** denotes all of the parameters, including both w and the unregularized parameters.
 
+>也就是说，拟合权值w，是两个变量的交互，需要适应各种情况，而偏置不直接和输入数据相乘,它并不**直接影响某一维度的数据**,因此常常不用对偏置正则化
+
+
+
 ## the sigmoid function use as output units
 
 Their use as output units is compatible with the use of gradient-based learning when an appropriate cost function can undo the saturation of the sigmoid in the output layer.

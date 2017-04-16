@@ -77,6 +77,21 @@ icon: fa-book
 
 ## 强化学习
 
+### UCL Course on RL
+
+这个算是一个入门RL的课吧！很值得一看。附上[链接](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Home.html)
+
+(1):[introduction for reinforcement learning ](https://yzhihao.github.io/machine%20learning/2017/04/02/reinforcement-learning.html)
+
+(2):[Markov decision processes](https://yzhihao.github.io/machine%20learning/2017/04/02/Markov-decision-processes.html)
+
+(3):[Planning by dynamic programming](https://yzhihao.github.io/2017/04/13/Planning-by-Dynamic-Programming.html)
+
+(4):[model free-Prediction](https://yzhihao.github.io/machine%20learning/2017/04/15/Monte-Carlo-Reinforcement-Learning.html)
+
+(5):[Model free-Control](https://yzhihao.github.io/2017/04/15/model-free-Control.html)
+
+
 ## 深度学习
 
 (1):[神经网络-基本概念](https://yzhihao.github.io/2017/03/13/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html)

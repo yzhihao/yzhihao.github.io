@@ -1,3 +1,24 @@
+---
+layout: post
+title: model free-Control
+desc: 我的博客
+keywords: 'blog,Machine Learning,AI'
+date: 2017-4-15T00:00:00.000Z
+categories:
+  - Machine Learning
+tags:
+  - Machine Learning
+  - AI
+icon: fa-book
+---
+
+
+## 目录
+**欢迎在文章下方评论，建议用电脑看**
+
+* 目录
+{:toc}
+
 # model free-Control
 
 
@@ -36,6 +57,10 @@
 ## Off-Policy Q-Learning
 
 <img src="{{ site.img_path }}/Machine Learning/model_free_control5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
+<img src="{{ site.img_path }}/Machine Learning/DP and TD.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 
 
 

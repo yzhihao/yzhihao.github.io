@@ -84,6 +84,10 @@ Our ConvNet configurations are quite different from the ones used in the top-per
 
 卷积层的改进：MLPconv，在每个local部分进行比传统卷积层复杂的计算，如上图右，**提高每一层卷积层对于复杂特征的识别能力，这里举个不恰当的例子，传统的CNN网络，每一层的卷积层相当于一个只会做单一任务，你必须要增加海量的filters来达到完成特定量类型的任务，而MLPconv的每层conv有更加大的能力，每一层能够做多种不同类型的任务，在选择filters时只需要很少量的部分**
 
+### 论1×1卷积的作用
+
+1×1的卷积层（可能）引起人们的重视是在NIN的结构中，论文中林敏师兄的想法是利用MLP代替传统的线性卷积核，从而提高网络的表达能力。文中同时利用了跨通道pooling的角度解释，认为文中提出的**MLP其实等价于在传统卷积核后面接cccp层，从而实现多个feature map的线性组合，实现跨通道的信息整合。而cccp层是等价于1×1卷积的，因此细看NIN的caffe实现，就是在每个传统卷积层后面接了两个cccp层（其实就是接了两个1×1的卷积层）。这就实现跨通道的交互和信息整合**
+
 
 ### 使用全局均值池化
 **论文原文(来源Network in Network)：**
@@ -95,10 +99,10 @@ Our ConvNet configurations are quite different from the ones used in the top-per
 
 **global average pooling 与average pooling的区别:**
 
-* 如最后一个卷积层输出10个feature map，average pooling 是对每个feature map分别求平均，输出10个feature map。
-* global average pooling是对每个feature map内部取平均，每个feature map变成一个值（因为kernel的大小设置成和feature map的相同），10个feature map就变成一个10维的向量，然后直接输入到softmax中。
+如最后一个卷积层输出10个feature map，average pooling 是对每个feature map分别求平均，输出10个feature map。
+global average pooling是对每个feature map内部取平均，每个feature map变成一个值（因为kernel的大小设置成和feature map的相同），10个feature map就变成一个10维的向量，然后直接输入到softmax中。
 
->其实简单理解就是在原始的CNN中10个feature map的话经过average pooling输出的不一定是一个值，而global average pooling输出的就一定是一个值，这也是我对
+>其实简单理解就是在原始的CNN中10个feature map的话经过average pooling输出的不一定是一个值，而global average pooling输出的就一定是一个值
 
 下图是直观理解：
 
@@ -112,8 +116,9 @@ Our ConvNet configurations are quite different from the ones used in the top-per
 ## GoogLeNet的结构特点
 
 
-![](http://img2016.itdadao.com/d/file/tech/2016/11/30/it286891301801182.png)
-以GoogLeNet的3a模块为例，输入的feature map是28×28×192，3a模块中1×1卷积通道为64，3×3卷积通道为128,5×5卷积通道为32，如果是左图结构，那么卷积核参数为1×1×192×64+3×3×192×128+5×5×192×32，而右图对3×3和5×5卷积层前分别加入了通道数为96和16的1×1卷积层，这样卷积核参数就变成了1×1×192×64+（1×1×192×96+3×3×96×128）+（1×1×192×16+5×5×16×32），参数大约减少到原来的三分之一。
+<img src="{{ site.img_path }}/Machine Learning/gogle1net.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+**再论1×1卷积的作用**以GoogLeNet的3a模块为例，输入的feature map是28×28×192，3a模块中1×1卷积通道为64，3×3卷积通道为128,5×5卷积通道为32，如果是左图结构，那么卷积核参数为1×1×192×64+3×3×192×128+5×5×192×32，而右图对3×3和5×5卷积层前分别加入了通道数为96和16的1×1卷积层，这样卷积核参数就变成了1×1×192×64+（1×1×192×96+3×3×96×128）+（1×1×192×16+5×5×16×32），参数大约减少到原来的三分之一。
 
 
 
@@ -122,15 +127,18 @@ Our ConvNet configurations are quite different from the ones used in the top-per
 
 <img src="{{ site.img_path }}/Machine Learning/resnet_jie.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-其实也很明显，通过求偏导我们就能看到,F(X)就是拟合残差，x就是之前的函数结果，两个相加就可以得到更加好的结果。可能这个解释比较懵懂，那么看下下面的解释
+通过求偏导我们就能看到,F(X)就是拟合残差，x就是之前的函数结果，两个相加就可以得到更加好的结果。
 
-<img src="{{ site.img_path }}/Machine Learning/paper_ImageNet7.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 <img src="{{ site.img_path }}/Machine Learning/paper_ImageNet8.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-我们发现，其实残差网络和dropout有类似的功能，其实也可以用上面的图，一条路径就代表这一个网络的话，那么就是和dropout类似的，这样集成正则化的方式，也是能有效采用这样的加深网络的方式来提升模型性能。
+**我们发现，其实残差网络和dropout有类似的功能，其实也可以用上面的图，一条路径就代表这一个网络的话，那么就是和dropout类似的，这样集成正则化的方式，也是能有效采用这样的加深网络的方式来提升模型性能。**
 
-为了节省计算资源，那么可以用下面的
+### 再论1*1卷积的作用
+
+<img src="{{ site.img_path }}/Machine Learning/paper_ImageNet7.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+>ResNet同样也利用了1×1卷积，并且是在3×3卷积层的前后都使用了，不仅进行了降维，还进行了升维，使得卷积层的输入和输出的通道数都减小，参数数量进一步减少.
 
 
   <!-- 多说评论框 start -->

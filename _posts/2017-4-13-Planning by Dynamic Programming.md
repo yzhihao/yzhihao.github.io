@@ -40,17 +40,9 @@ MDP需要解决的问题有两种，第一种是prediction，它已知MDP的S,A,
 1. prediction可以看成就是在评估一个策略，**注意这里的策略已经给出**，用到的Bellman是期望
 2. prediction可以看成就是在寻找一个策略，注意这里的策略是没有给出的，是要我们去寻找的，这里用到的Bellman就是最优解。
 
-## value iteration
+## value iteration and policy iteration
 
-![](https://pic1.zhimg.com/b0f9e31bb234359dafb8dd07c91fc87c_b.png)
-
-## policy iteration
-
-![](https://pic4.zhimg.com/448b844c0f2372504605d24ba56e6b0f_b.png)
-
-其中：
-
-![](https://pic4.zhimg.com/ab3f0d3d207c790de7ba01f3810881eb_b.png)
+<img src="{{ site.img_path }}/Machine Learning/itertion1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 ## Greedy Policy Improvement
 

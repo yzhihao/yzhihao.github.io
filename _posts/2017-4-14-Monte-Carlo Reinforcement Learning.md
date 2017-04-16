@@ -1,5 +1,23 @@
-# Monte-Carlo Reinforcement Learning
+---
+layout: post
+title: model free-Prediction
+desc: 我的博客
+keywords: 'blog,Machine Learning,AI'
+date: 2017-4-15T00:00:00.000Z
+categories:
+  - Machine Learning
+tags:
+  - Machine Learning
+  - AI
+icon: fa-book
+---
 
+
+## 目录
+**欢迎在文章下方评论，建议用电脑看**
+
+* 目录
+{:toc}
 
 ## unknown MDP
 

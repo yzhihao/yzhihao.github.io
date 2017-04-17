@@ -22,19 +22,55 @@ icon: fa-book
 
 # cs224d-rnn,gru,lstm
 
+因为rnn和lstm的讲解在这篇博文已经讲过比较多了，这里就不详细讲解rnn和lstm了，下面主要是rnn的训练和一种变种！
+
+## RNN
+
+
+<img src="{{ site.img_path }}/Machine Learning/cs224d_rnn1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+RNN语言模型中非常关键的一点是**每个时刻采用的W矩阵都是一个，所以参数规模不会随着依赖上下文的长度增加而指数增长。** 通常来说采用交叉熵作为损失函数，那么在t时刻的损失为：
+
+
+<img src="{{ site.img_path }}/Machine Learning/cs224d_rnn2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+用来**衡量语言模型的一个常用指标是困惑度（perplexity），困惑度越低表示预测下个词的置信度越高**，困惑度和交叉熵的关系如下：
+
+<img src="{{ site.img_path }}/Machine Learning/cs224d_rnn3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+## RNN训练
+
+其实RNN本质上还是一个普通的多层神经网络，只是**层与层之间使用的是同一个权重矩阵**而已， 同样可以利用后向误差传播的原理来进行后向误差传播， 只需要把tt时刻的误差一直传播到t=0t=0时刻，但是在实际实现的时候一般只需要向后传播τ≈3−5个时间单位。
+
+<img src="{{ site.img_path }}/Machine Learning/cs224d_rnn4.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+<img src="{{ site.img_path }}/Machine Learning/cs224d_rnn5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
+## Lstm
+
+**笔记原文:**
+
+<img src="{{ site.img_path }}/Machine Learning/lstm.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+<img src="{{ site.img_path }}/Machine Learning/lstm2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 ## GRU
 
+GRU可以看成是LSTM的变种，GRU把**LSTM中的`forget gate`和`input gate`用`update gate`来替代。** 把`cell state`和隐状态h(t)进行合并，在计算当前时刻新信息的方法和LSTM有所不同。
+
+**笔记原文:**
 <img src="{{ site.img_path }}/Machine Learning/gru1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 <img src="{{ site.img_path }}/Machine Learning/gru2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 <img src="{{ site.img_path }}/Machine Learning/gru3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-## Lstm
+**下图是GRU更新h(t)的过程：**
 
-<img src="{{ site.img_path }}/Machine Learning/lstm.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/gru_cs224d1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-<img src="{{ site.img_path }}/Machine Learning/lstm2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/gru_cs224d.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 ## GRUS and Lstm
 

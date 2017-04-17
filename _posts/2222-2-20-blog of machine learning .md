@@ -133,7 +133,7 @@ icon: fa-book
 
 (1): [cs224d-word Vectors](https://yzhihao.github.io/machine%20learning/2017/03/15/cs224d.html)
 
-(2):[cs224d-neuro network](https://yzhihao.github.io/machine%20learning/2017/03/16/cs224d_neuro-network.html)
+(2):[cs224d-neuro network (交叉熵)](https://yzhihao.github.io/machine%20learning/2017/03/16/cs224d_neuro-network.html)
 
 (3):[cs224d-rnn,gru,lstm](https://yzhihao.github.io/machine%20learning/2017/03/17/cs224d_RNN,GRU,LSTM.html)
 

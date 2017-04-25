@@ -64,7 +64,32 @@ Value function is a prediction of future reward Used to evaluate the goodness/ba
 
 ### 马尔可夫链/过程(Markov Chain/Process)
 
+先说说马尔可夫性质：`“The future is independent of the past given the present”`
+
+<img src="{{ site.img_path }}/Machine Learning/Markov Property.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+The state captures all relevant information from the history，Once the state is known, the history may be thrown away。i.e. The state is a sufficient statistic of the future
+
 <img src="{{ site.img_path }}/Machine Learning/26Markov_decision_processes1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+**课件原文：**
+
+For a Markov state s and successor state s‘, the state transition probability is defined by
+
+<img src="{{ site.img_path }}/Machine Learning/successor state s.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+State transition matrix P defines transition probabilities from all
+states s to all successor states s'：
+
+<img src="{{ site.img_path }}/Machine Learning/successor states s1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+where each row of the matrix sums to 1
+
+A Markov process is a memoryless random process, i.e. a sequence of random states S1, S2, ... with the Markov property
+
+A Markov Process (or Markov Chain) is a tuple <S,P> where S is a (finite) set of states and P is a state transition probability matrix,
+P（ss'） = P [S（t+1) = s’| S（t）= s]
+
 
 ### 马尔可夫奖赏过程(Markov Reward Process)
 
@@ -97,44 +122,6 @@ Stochastic policy: π(a|s) = P[A(t) = a|S（t） = s]（随机策略，由状态
 
 >**注意，policy是状态到动作的一组映射，他表示在一系列状态下采取的一系列相应的动作**
 
-### state transition distribution
-
-状态转换分布（state transition distribution）。对于每个属于集合S的状态s和每个属于集合A的动作a，如果我们在状态s中采取了动作s，那么我们就会转换到一个新的状态中，而状态转换分布就给出了我们会随机转换到哪个状态的概率分布。
-
-<img src="{{ site.img_path }}/Machine Learning/zhuangtaizhuanhuan.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-
->也就是在某个状态采取某个动作之后的一些转换概率
-
-### Value Function
-
-Value function is a prediction of future reward Used to evaluate the goodness/badness of states And therefore to select between actions, e.g.
-
-<img src="{{ site.img_path }}/Machine Learning/vaule_found.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-## Markov Property
-
-`“The future is independent of the past given the present”`
-
-<img src="{{ site.img_path }}/Machine Learning/Markov Property.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-
-The state captures all relevant information from the history，Once the state is known, the history may be thrown away。i.e. The state is a sufficient statistic of the future
-
-## State Transition Matrix
-
-For a Markov state s and successor state s‘, the state transition probability is defined by
-
-<img src="{{ site.img_path }}/Machine Learning/successor state s.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-
-State transition matrix P defines transition probabilities from all
-states s to all successor states s'：
-
-<img src="{{ site.img_path }}/Machine Learning/successor states s1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-
-where each row of the matrix sums to 1
-
-A Markov process is a memoryless random process, i.e. a sequence of random states S1, S2, ... with the Markov property
-
-A Markov Process (or Markov Chain) is a tuple <S,P> where S is a (finite) set of states and P is a state transition probability matrix,
-P（ss'） = P [S（t+1) = s’| S（t）= s]
 
 ## Markov Reward Process
 

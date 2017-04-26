@@ -19,27 +19,9 @@ icon: fa-book
 * 目录
 {:toc}
 
-### Policy
-
-A policy is the agent’s behaviour It is a map from state to action, e.g.
-
-Deterministic policy: a = π(s)（确定策略）
-Stochastic policy: π(a|s) = P[A(t) = a|S（t） = s]（随机策略，由状态决定）
-
->**注意，policy是状态到动作的一组映射，他表示在一系列状态下采取的一系列相应的动作**
 
 
-
-### Value Function
-
-Value function is a prediction of future reward Used to evaluate the goodness/badness of states And therefore to select between actions, e.g.
-
-<img src="{{ site.img_path }}/Machine Learning/vaule_found.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-
-
-# Markov decision processes
-
-## 基础概念
+# 基础概念
 
 状态集合S: **有限状态state集合，s表示某个特定状态**
 
@@ -50,19 +32,20 @@ Value function is a prediction of future reward Used to evaluate the goodness/ba
 状态转换分布（state transition distribution）。对于每个属于集合S的状态s和每个属于集合A的动作a，如果我们在状态s中采取了动作s，那么我们就会转换到一个新的状态中，而状态转换分布就给出了我们会随机转换到哪个状态的概率分布。
 
 <img src="{{ site.img_path }}/Machine Learning/zhuangtaizhuanhuan.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+分布（state transition distribution）。对于每个属于集合S的状态s和每个属于集合A的动作a，如果我们在状态s中采取了动作s，那么我们就会转换到一个新的状态中，而状态转换分布就给出了我们会随机转换到哪个状态的概率分布。
 
 >也就是在某个状态采取某个动作之后的一些转换概率
 
 
 <img src="{{ site.img_path }}/Machine Learning/26Markov_decision_processes.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-## Markov Process
+# Markov Process
 
 **从MP开始到MRP再到MDP，了解值函数的具体概念与reward有什么联系**
 
 **MDP描述了强化学习的environment，且是fully Observable的**
 
-### 马尔可夫链/过程(Markov Chain/Process)
+## 马尔可夫链/过程(Markov Chain/Process)
 
 先说说马尔可夫性质：`“The future is independent of the past given the present”`
 
@@ -91,9 +74,7 @@ A Markov Process (or Markov Chain) is a tuple <S,P> where S is a (finite) set of
 P（ss'） = P [S（t+1) = s’| S（t）= s]
 
 
-### 马尔可夫奖赏过程(Markov Reward Process)
-
-<img src="{{ site.img_path }}/Machine Learning/26Markov_decision_processes2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+## 马尔可夫奖赏过程(Markov Reward Process)
 
 <img src="{{ site.img_path }}/Machine Learning/26Markov_decision_processes2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
@@ -106,7 +87,7 @@ P（ss'） = P [S（t+1) = s’| S（t）= s]
 <img src="{{ site.img_path }}/Machine Learning/26Markov_decision_processes6.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
-### 马尔可夫决策过程(Markov Decision Process)
+## 马尔可夫决策过程(Markov Decision Process)
 
 <img src="{{ site.img_path }}/Machine Learning/26Markov_decision_processes7.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 

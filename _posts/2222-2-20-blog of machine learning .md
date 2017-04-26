@@ -49,6 +49,8 @@ icon: fa-book
 
 (4):[特征工程，模型评价（二）](https://yzhihao.github.io/machine%20learning/2017/02/11/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%BA%8C.html)
 
+(4):[特征工程，模型评价（二）](https://yzhihao.github.io/machine%20learning/2017/02/11/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%BA%8C.html)
+
 ## 有监督/无监督学习，关联分析等
 
 (1):[线性回归](https://yzhihao.github.io/machine%20learning/2017/02/16/%E5%9B%9E%E5%BD%92-%E7%AE%80%E5%8D%95%E5%88%86%E7%B1%BB.html)

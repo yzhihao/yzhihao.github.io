@@ -29,9 +29,9 @@ Dynamic programming assumes full knowledge of the MDP,It is used for planning in
 
 动态规划是这样一种方法，它将一个复杂的问题切分成一系列简单的子问题，一旦解决了这些简单的子问题，再将这些子问题的解结合起来变成复杂问题的解，同时将它们的解保存起来，如果下一次遇到了相同的子问题那么就不用再重新计算子问题的解[1]。其中“动态”是指某个问题是由序列化状态组成，状态step-by-step的改变，从而可以step-by-step的来解这个问题，“规划”即优化子问题。而MDP有Bellman方程能够被递归的切分成子问题，同时它有值函数，保存了每一个子问题的解，因此它能通过动态规划来求解。针对MDP，切分成的子问题就是在每个状态下应该选择的action是什么，MDP的子问题是以一种递归的方式存在，这一时刻的子问题取决于上一时刻的子问题选择了哪个action。
 
-MDP需要解决的问题有两种，第一种是prediction，它已知MDP的S,A,P,R,γ以及policy，目标是算出在每个状态下的value function，即处于每个状态下能够获得的reward是多少。而第二种是control，它已知MDP的S,A,P,R,γ但是policy未知，因此它的目标不仅是计算出最优的value function而且要给出最优的Policy。
+MDP需要解决的问题有两种，**第一种是prediction，它已知MDP的S,A,P,R,γ以及policy，目标是算出在每个状态下的value function，即处于每个状态下能够获得的reward是多少。而第二种是control，它已知MDP的S,A,P,R,γ但是policy未知，因此它的目标不仅是计算出最优的value function而且要给出最优的Policy。**
 
-当已知MDP的状态转移矩阵时，environment的模型就已知了，此时可以看成Planning问题，动态规划则是用来解决MDP的Planning问题，主要解决途径有两种，Policy Iteration和Value Iteration。
+当已知MDP的状态转移矩阵时，environment的模型就已知了，此时可以看成Planning问题，动态规划则是用来解决MDP的Planning问题，主要解决途径有两种，**Policy Iteration和Value Iteration。**
 
 ##  problem of prediction and control
 
@@ -43,6 +43,22 @@ MDP需要解决的问题有两种，第一种是prediction，它已知MDP的S,A,
 ## value iteration and policy iteration
 
 <img src="{{ site.img_path }}/Machine Learning/itertion1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
+###  policy iteration
+
+<img src="{{ site.img_path }}/Machine Learning/27Policy_Iteration.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+那么这里要注意的是policy evaluation部分。这里的迭代很重要的一点是需要知道state状态转移概率p。也就是说依赖于model模型。而且按照算法要反复迭代直到收敛为止。所以一般需要做限制。比如到某一个比率或者次数就停止迭代。那么需要特别说明的是不管是策略迭代还是值迭代都是在理想化的情况下（上帝视角）推导出来的算法，本质上并不能直接应用，因为依赖Model。
+
+###  value iteration
+
+
+<img src="{{ site.img_path }}/Machine Learning/27value_iteration.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
+<img src="{{ site.img_path }}/Machine Learning/27Iteration_any.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 
 ## Greedy Policy Improvement
 

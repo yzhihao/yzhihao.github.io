@@ -57,7 +57,7 @@ GAN定义的判别器loss，我们可以得到最优判别器的形式；而在�
 
 ## 原始GAN优缺点
 
-<img src="{{ site.img_path }}/Machine Learning/gan_advanddisadv.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/gan_advanddisadv.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 缺点：必须同时把握好训练强度，避免生成样本过度接近真实样本从而减少其多样性。也就是**too many values of z to the same value of x to have enough diversity to model p data**
 
@@ -86,13 +86,13 @@ manipulation of many semantic qualities of generated samples.
 
 
 
-<img src="{{ site.img_path }}/Machine Learning/dc_gan1.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/dc_gan1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
 
 ## 在DCGAN中三个改进cnn方式
 
-<img src="{{ site.img_path }}/Machine Learning/dc-gan-impro.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/dc-gan-impro.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
 

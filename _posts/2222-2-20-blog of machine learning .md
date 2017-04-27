@@ -93,6 +93,13 @@ icon: fa-book
 
 (5):[Model free-Control](https://yzhihao.github.io/2017/04/15/model-free-Control.html)
 
+(6):[Value Function Approximation](https://yzhihao.github.io/machine%20learning/2017/04/15/Value-Function-Approximation.html)
+
+(7):[Value Function Approximation](https://yzhihao.github.io/machine%20learning/2017/04/15/Value-Function-Approximation.html)
+
+
+
+[ Exploration and Exploitation](https://yzhihao.github.io/machine%20learning/2017/04/15/Value-Function-Approximation.html)
 
 ## 深度学习
 

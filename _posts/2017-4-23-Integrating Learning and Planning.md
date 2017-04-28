@@ -22,7 +22,6 @@ icon: fa-book
 
 # Integrating Learning and Planning
 
-
 <img src="{{ site.img_path }}/Machine Learning/Integrating_Learning.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 ## Model-Based Reinforcement Learning

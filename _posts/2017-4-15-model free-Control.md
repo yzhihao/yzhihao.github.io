@@ -54,9 +54,27 @@ icon: fa-book
 <img src="{{ site.img_path }}/Machine Learning/model_free_control4.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
+
+
 ## Off-Policy Q-Learning
 
 <img src="{{ site.img_path }}/Machine Learning/model_free_control5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+Q-Learning 整体算法:
+
+<img src="{{ site.img_path }}/Machine Learning/27Q-Learning.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
+## Q-Learning和Sarsa对比
+
+
+<img src="{{ site.img_path }}/Machine Learning/27Sarsa.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+从算法来看, 这就是他们两最大的不同之处了. 因为 Sarsa 是说到做到型, 所以我们也叫他 on-policy, 在线学习, 学着自己在做的事情. 而 Q learning 是说到但并不一定做到, 所以它也叫作 Off-policy, 离线学习. 而因为有了 maxQ, Q-learning 也是一个特别勇敢的算法.
+
+<img src="{{ site.img_path }}/Machine Learning/27Sarsa1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+为什么说他勇敢呢, 因为 Q learning 机器人 永远都会选择最近的一条通往成功的道路, 不管这条路会有多危险. 而 Sarsa 则是相当保守, 他会选择离危险远远的, 拿到宝藏是次要的, 保住自己的小命才是王道. 这就是使用 Sarsa 方法的不同之处.
 
 
 <img src="{{ site.img_path }}/Machine Learning/DP and TD.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>

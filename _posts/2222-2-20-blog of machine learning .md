@@ -43,7 +43,7 @@ icon: fa-book
 
 (2):[机器学习有关的数学基础知识-概率](https://yzhihao.github.io/machine%20learning/2017/02/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9C%89%E5%85%B3%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%A6%82%E7%8E%87.html)
 
->此外，机器学习中也用了挺多高数导数的知识，比如BP算法等，在这里就不详细介绍了，等讲到相应的算法会进行讲述。
+>此外，机器学习中也用了挺多高数导数的知识，比如BP算法等，在这里就不Generative Adversarial networks详细介绍了，等讲到相应的算法会进行讲述。
 
 (3):[特征工程，模型评价与选择（一）](https://yzhihao.github.io/machine%20learning/2017/01/18/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%B8%80.html)
 
@@ -95,11 +95,11 @@ icon: fa-book
 
 (6):[Value Function Approximation](https://yzhihao.github.io/machine%20learning/2017/04/15/Value-Function-Approximation.html)
 
-(7):[Value Function Approximation](https://yzhihao.github.io/machine%20learning/2017/04/15/Value-Function-Approximation.html)
+(7):[Policy Gradient](https://yzhihao.github.io/machine%20learning/2017/04/21/Policy-Gradient.html)
 
+(8):[Integrating Learning and Planning](https://yzhihao.github.io/machine%20learning/2017/04/22/Integrating-Learning-and-Planning.html)
 
-
-[ Exploration and Exploitation](https://yzhihao.github.io/machine%20learning/2017/04/15/Value-Function-Approximation.html)
+(9):[ Exploration and Exploitation](https://yzhihao.github.io/machine%20learning/2017/04/25/Exploration-and-Exploitation.html)
 
 ## 深度学习
 
@@ -115,8 +115,7 @@ icon: fa-book
 
 (6):[Generative Adversarial networks](https://yzhihao.github.io/machine%20learning/2017/03/14/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C.html)
 
-
-
+(7):[Wasserstein GAN](https://yzhihao.github.io/machine%20learning/2017/04/20/Wasserstein-GAN.html)
 
 
 ## 论文笔记

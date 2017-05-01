@@ -45,11 +45,11 @@ icon: fa-book
 
 >此外，机器学习中也用了挺多高数导数的知识，比如BP算法等，在这里就不Generative Adversarial networks详细介绍了，等讲到相应的算法会进行讲述。
 
-(3):[特征工程，模型评价与选择（一）](https://yzhihao.github.io/machine%20learning/2017/01/18/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%B8%80.html)
+(3):[数据处理，特征工程](https://yzhihao.github.io/machine%20learning/2017/01/18/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%B8%80.html)
 
-(4):[特征工程，模型评价（二）](https://yzhihao.github.io/machine%20learning/2017/02/11/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%BA%8C.html)
+(4):[模型选择与评价，降维](https://yzhihao.github.io/machine%20learning/2017/02/11/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%BA%8C.html)
 
-(4):[特征工程，模型评价（二）](https://yzhihao.github.io/machine%20learning/2017/02/11/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7-%E4%BA%8C.html)
+(4):[机器学习基础概念](https://yzhihao.github.io/machine%20learning/2017/01/19/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5.html)
 
 ## 有监督/无监督学习，关联分析等
 
@@ -79,9 +79,18 @@ icon: fa-book
 
 ## 强化学习
 
+(1):[DQN](https://yzhihao.github.io/machine%20learning/2017/04/26/DQN.html)
+
+(2):[Policy Gradient](https://yzhihao.github.io/machine%20learning/2017/04/26/Policy-Gradient.html)
+
+(3):[Actor critic](https://yzhihao.github.io/2017/04/27/Actor-Critic.html)
+
+(4):[蒙特卡洛树搜索 mcts](https://yzhihao.github.io/2017/04/28/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2-MCTS.html)
+
+
 ### UCL Course on RL
 
-这个算是一个入门RL的课吧！很值得一看。附上[链接](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Home.html)
+一个关于RL的课！应该说很练内功，很值得一看。附上[链接](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Home.html)
 
 (1):[introduction for reinforcement learning ](https://yzhihao.github.io/machine%20learning/2017/04/02/reinforcement-learning.html)
 

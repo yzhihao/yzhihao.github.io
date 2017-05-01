@@ -1,12 +1,36 @@
+---
+layout: post
+title:  Policy Gradient
+desc: 我的博客
+keywords: 'blog,Machine Learning,AI'
+date: 2017-4-26T00:00:00.000Z
+categories:
+  - Machine Learning
+tags:
+  - Machine Learning
+  - AI
+icon: fa-book
+---
+
+
+## 目录
+**欢迎在文章下方评论，建议用电脑看**
+
+* 目录
+{:toc}
+
 # Policy Gradient
 
 ## 什么是Policy Gradient
+
+看[这篇博文](https://karpathy.github.io/2016/05/31/rl/?_utm_source=1-2-2)（关于Policy Gradient的，推荐一看）中看到，这个方式比DQN更加的有效。
+
 
 我们已经知道DQN是一个基于价值value的方法。换句话说就是通过计算每一个状态动作的价值，然后选择价值最大的动作执行。这是一种间接的做法。那么，更直接的做法是什么？
 
 能不能直接更新策略网络Policy Network呢？
 
-什么是策略网络Policy Network？就是一个神经网络，输入是状态，输出直接就是动作（不是Q值）。
+什么是策略网络Policy Network？就是一个神经网络，**输入是状态，输出直接就是估计动作（不是Q值）。这里的label就是真实动作,loss就是:`所选概率的-log值*（本reward + 衰减的未来reward）`**
 
 <img src="{{ site.img_path }}/Machine Learning/Policy_Network.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
@@ -44,11 +68,14 @@ Policy gradient 是 RL 中另外一个大家族, 他不像 Value-based 方法 (Q
 
 这就是Policy Gradient最基本的思想。
 
-
-
 f(s,a)不仅仅可以作为动作的评价指标，还可以作为目标函数。就如同AlphaGo，评价指标就是赢或者输，而目标就是结果赢。这和之前分析的目标完全没有冲突。因此，我们可以利用评价指标f(s,a)来优化Policy，同时也是在优化的同时优化了f(s,a).那么问题就变成对f(s,a)求关于参数的梯度。下面的公式直接摘自Andrej Karpathy的blog，f(x)即是f(s,a)
 
 <img src="{{ site.img_path }}/Machine Learning/Policy_Network5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-
 从公式得到的结论可以看到正好和上一小结分析得到的目标函数一致。
+
+
+
+>最后，来自[莫烦python](https://morvanzhou.github.io/tutorials/machine-learning/reinforcement-learning/5-1-policy-gradient-softmax1/)的一张图,那里的例子比较好懂，值得一看。下面也是基本的Policy Gradient的算法。
+
+<img src="{{ site.img_path }}/Machine Learning/policy_gradient_agr.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>

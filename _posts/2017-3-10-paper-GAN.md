@@ -45,7 +45,7 @@ Deep generative models have had less of an impact, due to the difficulty of appr
 注意上面的式子,也就变成了下面这个
 ![](http://zhihu.com/equation?tex=2JS%28P_r+%7C%7C+P_g%29+-+2%5Clog+2)
 GAN定义的判别器loss，我们可以得到最优判别器的形式；而在最优判别器的下，我们可以把原始GAN定义的生成器loss等价变换为最小化真实分布P_r与生成分布P_g之间的JS散度。我们越训练判别器，它就越接近最优，最小化生成器的loss也就会越近似于最小化P_r和P_g之间的JS散度。
-但其实在散度的表示存在很多问题,详细见:[生成对抗网络]()
+但其实在散度的表示存在很多问题,详细见:[Wasserstein-GAN](https://yzhihao.github.io/machine%20learning/2017/04/20/Wasserstein-GAN.html)
 
 ## GAN收敛
 **论文原文：**
@@ -70,9 +70,7 @@ GAN定义的判别器loss，我们可以得到最优判别器的形式；而在�
 
 GANs provide an attractive alternative to maximum likelihood techniques. One can additionally argue that their learning process and the lack of a heuristic cost function (such as pixel-wise independent mean-square error) are attractive to representation learning. GANs have been known to be unstable to train, often resulting in generators that produce nonsensical outputs. There has been very limited published research in trying to understand and visualize what GANs learn, and the intermediate representations of multi-layer GANs.
 
-简单
-
-## 
+## DCGAN结构特点
 
 We propose and evaluate a set of constraints on the architectural topology of Convolutional
 GANs that make them stable to train in most settings. We name this class of architectures
@@ -94,8 +92,7 @@ manipulation of many semantic qualities of generated samples.
 
 <img src="{{ site.img_path }}/Machine Learning/dc-gan-impro.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-
-
+也就是取消pooling，取消全链接，加上BN。
 
  <!-- 多说评论框 start -->
 

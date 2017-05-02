@@ -37,5 +37,9 @@
 
 >网络有四个，其实大体上和基础 Actor Critic差不多，都是Actor给动作给Critic进行评估，Critic给反馈（基础中是td_error，而这里是dQ/da）给Actor进行更新参数。
 
+最后Actor Critic其实是有很多中不同的形式的，如下图：
+
+<img src="{{ site.img_path }}/Machine Learning/51policy_gradient1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 
 

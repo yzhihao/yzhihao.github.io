@@ -23,7 +23,7 @@ icon: fa-book
 
 <img src="{{ site.img_path }}/Machine Learning/Function_Approximation.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-简单来说，**function approximation的意义是**： **large MDPs** 的情况下，如果算出每种状态下的真实value function既没有足够的内存也没有足够的计算能力，此外比较接近的状态它们的值函数取值应该是很相似的，这是一种泛化能力。也就是说需要算法来求解近似的V(S)和Q(S,A)，并且针对未知的状态有比较强的泛化能力。这种近似算法称之为function approximation，
+简单来说，**function approximation的意义是**： **large MDPs 的情况下，如果算出每种状态下的真实value function既没有足够的内存也没有足够的计算能力，此外比较接近的状态它们的值函数取值应该是很相似的，这是一种泛化能力。也就是说需要算法来求解近似的V(S)和Q(S,A)，并且针对未知的状态有比较强的泛化能力。这种近似算法称之为function approximation.**
 
 ## Incremental Methods
 

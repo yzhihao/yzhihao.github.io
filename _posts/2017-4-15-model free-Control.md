@@ -72,6 +72,8 @@ Q-Learning 整体算法:
 
 从算法来看, 这就是他们两最大的不同之处了. 因为 Sarsa 是说到做到型, 所以我们也叫他 on-policy, 在线学习, 学着自己在做的事情. 而 Q learning 是说到但并不一定做到, 所以它也叫作 Off-policy, 离线学习. 而因为有了 maxQ, Q-learning 也是一个特别勇敢的算法.
 
+>其实也就是在Q现实的选取上有所不同，Q-Learning的Q现实是借助别人的好的经验或者之前一段时间的经验（这样的经验是比较稳的）而Sarsa的Q现实是即时的选取，是一种比较激进的的做法。
+
 <img src="{{ site.img_path }}/Machine Learning/27Sarsa1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 为什么说他勇敢呢, 因为 Q learning 机器人 永远都会选择最近的一条通往成功的道路, 不管这条路会有多危险. 而 Sarsa 则是相当保守, 他会选择离危险远远的, 拿到宝藏是次要的, 保住自己的小命才是王道. 这就是使用 Sarsa 方法的不同之处.

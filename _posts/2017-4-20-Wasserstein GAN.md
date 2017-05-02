@@ -57,17 +57,11 @@ GAN模型被定义为极小极大问题，没有损失函数，在训练过程�
 
 ## 原始GAN形式的问题
 
+<img src="{{ site.img_path }}/Machine Learning/26Wasserstein_GAN0.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 ## 第一种原始GAN形式的问题
 
 一句话概括：判别器越好，生成器梯度消失越严重
-
-下图就是直观认识：
-
-
-<img src="{{ site.img_path }}/Machine Learning/Wesserstein_gan.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
-
-WGAN前作Figure 2。先分别将DCGAN训练1，20，25个epoch，然后固定生成器不动，判别器重新随机初始化从头开始训练，对于第一种形式的生成器loss产生的梯度可以打印出其尺度的变化曲线，可以看到随着判别器的训练，生成器的梯度均迅速衰减。注意y轴是对数坐标轴。
-
 
 <img src="{{ site.img_path }}/Machine Learning/26Wasserstein_GAN.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 

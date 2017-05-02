@@ -79,3 +79,5 @@ f(s,a)不仅仅可以作为动作的评价指标，还可以作为目标函数�
 >最后，来自[莫烦python](https://morvanzhou.github.io/tutorials/machine-learning/reinforcement-learning/5-1-policy-gradient-softmax1/)的一张图,那里的例子比较好懂，值得一看。下面也是基本的Policy Gradient的算法。
 
 <img src="{{ site.img_path }}/Machine Learning/policy_gradient_agr.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+其实，这个也就是那个课程上的[Monte-Carlo Policy Gradient](https://yzhihao.github.io/machine%20learning/2017/04/21/Policy-Gradient.html)

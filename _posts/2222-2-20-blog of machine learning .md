@@ -100,7 +100,7 @@ icon: fa-book
 
 (4):[model free-Prediction](https://yzhihao.github.io/machine%20learning/2017/04/15/Monte-Carlo-Reinforcement-Learning.html)
 
-(5):[Model free-Control](https://yzhihao.github.io/2017/04/15/model-free-Control.html)
+(5):[Model free-Control](https://yzhihao.github.io/machine%20learning/2017/04/15/model-free-Control.html)
 
 (6):[Value Function Approximation](https://yzhihao.github.io/machine%20learning/2017/04/15/Value-Function-Approximation.html)
 

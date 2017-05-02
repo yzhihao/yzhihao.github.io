@@ -72,6 +72,12 @@ GANs provide an attractive alternative to maximum likelihood techniques. One can
 
 ## DCGAN结构特点
 
+首先来看下它的结构：
+
+
+<img src="{{ site.img_path }}/Machine Learning/dcgan_stru.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
 We propose and evaluate a set of constraints on the architectural topology of Convolutional
 GANs that make them stable to train in most settings. We name this class of architectures
 Deep Convolutional GANs (DCGAN)

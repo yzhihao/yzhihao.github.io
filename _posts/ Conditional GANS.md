@@ -25,21 +25,24 @@ icon: fa-book
 
 在生成模型G和判别模型D中同时**加入条件约束y来引导数据的生成过程。**条件可以是任何补充的信息，如类标签，其它模态的数据等，这样使得GAN能够更好地被应用于跨模态问题，例如图像自动标注。
 
-## [Generative Adversarial Nets](https://arxiv.org/pdf/1411.1784.pdf)
+## Generative Adversarial Nets
 
+[原文](https://arxiv.org/pdf/1411.1784.pdf)
 
 <img src="{{ site.img_path }}/Machine Learning/CGAN.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 上图所示是CGAN的结构。
 
-把噪声z和条件y作为输入同时送进生成器，生成跨域向量，再通过非线性函数映射到数据空间。
+把**噪声z和条件y作为输入同时送进生成器**，生成跨域向量，再通过非线性函数映射到数据空间。
 
-把数据x和条件y作为输入同时送进判别其，生成跨域向量，并进一步判断x是真实训练数据的概率。
+把**数据x和条件y作为输入同时送进判别其**，生成跨域向量，并进一步判断x是真实训练数据的概率。
 
 <img src="{{ site.img_path }}/Machine Learning/CGAN1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
-## [Image-to-Image Translation with Conditional Adversarial Networks](https://phillipi.github.io/pix2pix/)
+## Image-to-Image Translation with Conditional Adversarial Networks
+
+[原文](https://phillipi.github.io/pix2pix/)
 
 本文主要在三个部分改进了原始的cGAN， 包括目标函数，生成器的网络结构和判别器的判别方式
 
@@ -60,10 +63,12 @@ icon: fa-book
 
 ### 3.提出PatchGAN
 
-通常判断都是对生成样本整体进行判断，比如对一张图片来说，就是直接看整张照片是否真实。而且Image-to-Image Translation中很多评价是像素对像素的，所以在这里提出了分块判断的算法，在图像的每个N×N块上去判断是否为真，最终平均给出结果。
+通常判断都是对生成样本整体进行判断，比如对一张图片来说，就是直接看整张照片是否真实。而且Image-to-Image Translation中很多评价是像素对像素的，所以在这里提出了分块判断的算法，在图像的每个`N×N`块上去判断是否为真，最终平均给出结果。
 
 
-## [Generative Adversarial Text to Image Synthesis](https://arxiv.org/pdf/1605.05396.pdf)
+## Generative Adversarial Text to Image Synthesis
+
+[原文](https://arxiv.org/pdf/1605.05396.pdf)
 
 我们的目标实际上是通过“文字”生成“图像”。为此我们需要解决以下两个问题：
 
@@ -73,7 +78,7 @@ icon: fa-book
 
 
 
-其中，第一个问题是用了之前一篇论文中的技术[Learning Deep Representations of Fine-grained Visual Descriptions](https://arxiv.org/abs/1605.05395)，这里就不细讲了。这里就假设文字描述为t，我们可以通过一个函数<img src="{{ site.img_path }}/Machine Learning/CGAN5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>将其转换为一个向量<img src="{{ site.img_path }}/Machine Learning/CGAN5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>(t)。
+其中，第一个问题是用了之前一篇论文中的技术[Learning Deep Representations of Fine-grained Visual Descriptions](https://arxiv.org/abs/1605.05395)，这里就不细讲了。**这里就假设文字描述为t，我们可以通过一个函数<img src="{{ site.img_path }}/Machine Learning/CGAN5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>将其转换为一个向量<img src="{{ site.img_path }}/Machine Learning/CGAN5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>(t)。**
 
 第二个问题，如何利用向量<img src="{{ site.img_path }}/Machine Learning/CGAN5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>(t)生成合适的图像？这就是GAN的工作，文中GAN的结构如下图所示：
 
@@ -98,10 +103,13 @@ icon: fa-book
 <img src="{{ site.img_path }}/Machine Learning/CGAN9.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
-## [StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks](https://arxiv.org/pdf/1605.05396.pdf)
+## StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks
 
+[原文]((https://arxiv.org/pdf/1605.05396.pdf)
 
-针对根据文本句子描述生成图像的任务，借鉴别人提出两个GAN叠加在一起的结构，改进了输入条件的部分，使以前只能生成96*96的图片，而现在可以用于生成256*256的图片。
+针对根据文本句子描述生成图像的任务，借鉴别人提出两个GAN叠加在一起的结构，改进了输入条件的部分，使以前只能生成`96*96`的图片，而现在可以用于生成`256*256`的图片。
+
+<img src="{{ site.img_path }}/Machine Learning/CGAN10.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 其中两个GAN的作用是：**第一个GAN用于根据文本描述生成一张相对粗糙的图像，包括目标物体的大致形状和颜色等，然后再通过第二个GAN去修正之前生成的图并添加细节，比如鸟的嘴和眼睛等。**
 

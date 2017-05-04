@@ -17,14 +17,15 @@ icon: fa-book
 **欢迎在文章下方评论，建议用电脑看**
 
 * 目录
-{:toc}
+{:toc}  
 
 # Policy Gradient
 
 ## 什么是Policy Gradient
 
-看[这篇博文](https://karpathy.github.io/2016/05/31/rl/?_utm_source=1-2-2)（关于Policy Gradient的，推荐一看）中看到，这个方式比DQN更加的有效。
+[Karpathy的blog](https://karpathy.github.io/2016/05/31/rl/?_utm_source=1-2-2)中提到说更多的人更倾向于Policy Gradient.原因如下：
 
+**基于值函数的方法（Q-learning, SARSA等等经典强化学习研究的大部分算法）存在策略退化问题，即值函数估计已经很准确了，但通过值函数得到的策略仍然不是最优。**这一现象类似于监督学习中通过后验概率来分类，后验概率估计的精度很高，但得到的分类仍然可能是错的。尤其是当强化学习使用值函数近似时，策略退化现象非常常见。可见 Tutorial on Reinforcement Learning  [slides](http://lamda.nju.edu.cn/yuy/Default.aspx?Page=adl-rl&AspxAutoDetectCookieSupport=1)中的例子。Policy Gradient不会出现策略退化现象，其目标表达更直接，求解方法更现代，还能够直接求解stochastic policy等等优点更加实用。
 
 我们已经知道DQN是一个基于价值value的方法。换句话说就是通过计算每一个状态动作的价值，然后选择价值最大的动作执行。这是一种间接的做法。那么，更直接的做法是什么？
 

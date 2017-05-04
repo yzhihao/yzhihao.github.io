@@ -38,6 +38,7 @@ GAN最开始是设计用于生成连续数据，但是自然语言处理中我�
 
 在这篇论文中，针对上面第一个问题，首先是将D的输出作为Reward，然后用Policy Gradient Method来训练G,也就是用D的输出作为Reward作为指导来改变Policy Gradient的方向，这也符合对抗网络的思想。针对第二个问题，通过蒙特卡罗搜索，针对部分生成的序列，用一个Roll-Out Policy（也是一个LSTM）来Sampling完整的序列，再交给D打分，最后对得到的Reward求平均值。
 
+
 ## 网络结构和训练
 
 
@@ -71,6 +72,13 @@ GAN最开始是设计用于生成连续数据，但是自然语言处理中我�
 <img src="{{ site.img_path }}/Machine Learning/GAN_FOR_NLP4.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 最后还像提一下的是，后来的[Adversarial Learning for Neural Dialogue Generation](https://arxiv.org/pdf/1701.06547.pdf)用了Policy Gradient Method来对GAN进行训练，和SeqGAN的方法并没有很大的区别，主要是用在了Dialogue Generation这样困难的任务上面。还有两点就是：第一点是除了用蒙特卡罗搜索来解决部分生成序列的问题之外，因为MC Search比较耗费时间，还可以训练一个特殊的D去给部分生成的序列进行打分（这里其实应该是联想到actor critic的做法）。但是从实验效果来看，MC Search的表现要更好一点。
+
+
+最后说下在论文中的rollout policy 是什么？取自AlphaGo's paper中
+
+The rollout policy ... is a linear softmax policy based on fast, incrementally computed, local pattern-based features ...
+
+也可以参看[这个回答](https://stats.stackexchange.com/questions/201927/whats-rollout-policy-in-alphagos-paper)
 
 ## Maximum-Likelihood Augmented Discrete Generative Adversarial Networks（MaliGAN）
 

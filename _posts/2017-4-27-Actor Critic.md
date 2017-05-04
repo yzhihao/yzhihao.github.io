@@ -4,7 +4,17 @@
 
 ## 为什么要有 Actor 和 Critic
 
-我们有了像 Q-learning 这么伟大的算法, 为什么还要瞎折腾出一个 Actor-Critic? **原来 Actor-Critic 的 Actor 的前生是 Policy Gradients , 这能让它毫不费力地在连续动作中选取合适的动作, 而 Q-learning 做这件事会瘫痪.** 那为什么不直接用 Policy Gradients 呢? 原来 Actor Critic 中的 Critic 的前生是 Q-learning 或者其他的 以值为基础的学习法 , 能进行单步更新, 而传统的 Policy Gradients 则是回合更新, 这降低了学习效率.也就是说**Actor Critic比单纯的Policy Gradients的效率要高。**
+我们有了像 Q-learning 这么伟大的算法, 为什么还要瞎折腾出一个 Actor-Critic? **原来 Actor-Critic 的 Actor 的前生是 Policy Gradients，或者说其实这也是一种Policy Gradients, 这能让它毫不费力地在连续动作中选取合适的动作, 而 Q-learning 做这件事会瘫痪.** 那为什么不直接用 Policy Gradients 呢? 原来 Actor Critic 中的 Critic 的前生是 Q-learning 或者其他的 以值为基础的学习法 , 能进行单步更新, 而传统的 Policy Gradients 则是回合更新, 这降低了学习效率.也就是说**Actor Critic比单纯的Policy Gradients的效率要高。**
+
+
+## Actor Critic综述
+
+接着上次Policy Gradients，那里引入一个baseline。
+
+<img src="{{ site.img_path }}/Machine Learning/51policy_gradient2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+<img src="{{ site.img_path }}/Machine Learning/51policy_gradient3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 
 ## 训练过程和组成
 
@@ -37,9 +47,6 @@
 
 >网络有四个，其实大体上和基础 Actor Critic差不多，都是Actor给动作给Critic进行评估，Critic给反馈（基础中是td_error，而这里是dQ/da）给Actor进行更新参数。
 
-最后Actor Critic其实是有很多中不同的形式的，如下图：
-
-<img src="{{ site.img_path }}/Machine Learning/51policy_gradient1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
 

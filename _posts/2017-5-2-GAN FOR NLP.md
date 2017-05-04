@@ -1,3 +1,25 @@
+---
+layout: post
+title:  GAN FOR NLP
+desc: 我的博客
+keywords: 'blog,Machine Learning,AI'
+date: 2017-5-2T00:00:00.000Z
+categories:
+  - Machine Learning
+tags:
+  - Machine Learning
+  - AI
+icon: fa-book
+---
+
+
+## 目录
+**欢迎在文章下方评论，建议用电脑看**
+
+* 目录
+{:toc}
+
+
 ## GAN FOR NLP
 
 主要想记录生成序列的gan在nlp的应用。主要是下面两篇论文
@@ -42,7 +64,7 @@ GAN最开始是设计用于生成连续数据，但是自然语言处理中我�
 
 根据（4）计算得到每个action选择得到的奖励并求得累积奖励的期望，以此为loss function，并求导对网络进行梯度更新。
 
-<img src="{{ site.img_path }}/Machine Learning/GAN_FOR_NLP3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/GAN_FOR_NLP5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 5、以下是标准的D网络误差函数，训练目标是最大化识别真实样本的概率，最小化误识别伪造样本的概率。
 
@@ -56,9 +78,11 @@ GAN最开始是设计用于生成连续数据，但是自然语言处理中我�
 
 1.为G**构造一个全新的目标函数，用到了Importance Sampling，将其与D的output结合起来，令训练过程更加稳定同时梯度的方差更低。**尽管这个目标函数和RL的方法类似，但是相比之下更能够降低estimator的方差（强烈建议看原文的3.2 Analysis，分析了当D最优以及D经过训练但并没有到最优两种情况下，这个新的目标函数仍然能发挥作用）
 
-2.生成较长序列的时候需要用到多次random sampling，所以文章还提出了两个降低方差的技巧：第一个是蒙特卡罗树搜索，这个大家都比较熟悉; 第二个文章称之为Mixed MLE-Mali Training，就是从真实数据中进行抽样，若序列长度大于N，则固定住前N个词，然后基于前N个词去freely run G产生M个样本，一直run到序列结束。
+2.生成较长序列的时候需要用到多次random sampling，所以文章还**提出了两个降低方差的技巧**：第一个是蒙特卡罗树搜索，这个大家都比较熟悉; 第二个文章称之为Mixed MLE-Mali Training，就是从真实数据中进行抽样，若序列长度大于N，则固定住前N个词，然后基于前N个词去freely run G产生M个样本，一直run到序列结束。
 
 <img src="{{ site.img_path }}/Machine Learning/GAN_FOR_NLP3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
 
 
 

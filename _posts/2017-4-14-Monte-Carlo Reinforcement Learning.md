@@ -41,6 +41,9 @@ icon: fa-book
 
 <img src="{{ site.img_path }}/Machine Learning/Monte-Carlo1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
+
+>最后说明，Prediction是一种在某种确定的策略下求值的方式，在[课件中的21点的例子中](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/MC-TD.pdf)，多次迭代才能求出值的原因就是一次的episode并不能求出值，而是多次的episode才能找出在这种策略下，这些状态的值。或者说，在求值的过程中，其实我们是在寻找那个状态到价值的那个参数，但仅仅一次或几次的episode，不能找到那个合适的参数映射，只有数据量很大的时候才能，当然是存在收敛的时候的！
+
 ## Temporal-Difference Learning
 
 <img src="{{ site.img_path }}/Machine Learning/Monte-Carlo2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>

@@ -81,3 +81,8 @@ f(s,a)不仅仅可以作为动作的评价指标，还可以作为目标函数�
 <img src="{{ site.img_path }}/Machine Learning/policy_gradient_agr.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 其实，这个也就是那个课程上的[Monte-Carlo Policy Gradient](https://yzhihao.github.io/machine%20learning/2017/04/21/Policy-Gradient.html)
+
+## 从一般Policy Gradient引申到Actor Critic
+
+<img src="{{ site.img_path }}/Machine Learning/Policy_Gradient_actor.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+

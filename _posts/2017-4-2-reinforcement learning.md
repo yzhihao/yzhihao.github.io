@@ -5,7 +5,7 @@ desc: 我的博客
 keywords: 'blog,Machine Learning,AI'
 date: 2017-4-2T00:00:00.000Z
 categories:
-  - Machine L2017-04-25 17-22-27屏幕截图earning
+  - Machine Learning
 tags:
   - Machine Learning
   - AI
@@ -82,6 +82,27 @@ Examples:
 
 在这样的学习过程中，就会有一个在Exploration和Exploitation之间的权衡，**前者是说会放弃一些已知的reward信息，而去尝试一些新的选择，**即在某种状态下，算法也许已经学习到选择什么action让reward比较大，但是并不能每次都做出同样的选择，也许另外一个没有尝试过的选择会让reward更大，即Exploration希望能够探索更多关于environment的信息。**而后者是指根据已知的信息最大化reward。**例如，在选择一个餐馆时，Exploitation会选择你最喜欢的餐馆，而Exploration会尝试选择一个新的餐馆。
 
+
+## 强化学习的分类
+
+
+
+<img src="{{ site.img_path }}/Machine Learning/RL_ppt2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+强化学习算法根据以策略为中心还是以值函数最优可以分为两大类，策略优化方法和动态规划方法。其中策略优化方法又分为进化算法和策略梯度方法；动态规划方法分为策略迭代算法和值迭代算法。策略迭代算法和值迭代算法可以利用广义策略迭代方法进行统一描述。
+
+<img src="{{ site.img_path }}/Machine Learning/ppt.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+根据转移概率是否已知和某个动作是否好不好可以分为基于模型的强化学习算法和无模型的强化学习算法，如上图。
+
+>需要注意的是在一开始学的时候指迭代和策略迭代是base model的，也就是基于model的，而后面学习的蒙特卡洛树搜索或者其他base model是两个不一样的base model的，前者是实实在在的了解环境，在对环境有所了解的基础上（体现在知道p等）建模。而后者是用“想象力对环境进行建模”，也就是多出了一个虚拟环境。 
+
+<img src="{{ site.img_path }}/Machine Learning/RL_fen_PPT.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
+上面一图算是一个总结，也就是说根据model是否free分和以值函数和策略优化分是两回事，他们是有交叉的!
+
+强化学习算法根据策略是否是随机的，分为确定性策略强化学习和随机性策略强化学习。另外，强化学习算法中的回报函数十分关键，根据回报函数是否已知，可以分为强化学习和逆向强化学习。逆向强化学习是根据专家实例将回报函数学出来
 
 
 

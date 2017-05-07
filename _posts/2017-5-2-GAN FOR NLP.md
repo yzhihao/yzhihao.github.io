@@ -50,7 +50,7 @@ GAN最开始是设计用于生成连续数据，但是自然语言处理中我�
 
 3、已知G网络的更新策略是增强学习，而增强学习的三个要素点状态state，action，reward。
 
-本文state指的当前timestep之前的decode结果，也就是lstm随机生成的t个词，action指的当前待解码词，也就是用mcs来Sampling的词为T-t个词，D网络判别伪造数据的置信度即为奖励，伪造数据越逼真则相应奖励越大，但该奖励是总的奖励，分配到每个词选择上的reward则采用了以下的近似方法。
+本文state指的当前timestep之前的decode结果，也就是lstm随机生成的t个词，action指的当前待解码词，也就是第t个词，D网络判别伪造数据的置信度即为奖励，伪造数据越逼真则相应奖励越大，但该奖励是总的奖励，分配到每个词选择上的reward则采用了以下的近似方法。
 
 <img src="{{ site.img_path }}/Machine Learning/GAN_FOR_NLP1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
@@ -79,6 +79,11 @@ GAN最开始是设计用于生成连续数据，但是自然语言处理中我�
 The rollout policy ... is a linear softmax policy based on fast, incrementally computed, local pattern-based features ...
 
 也可以参看[这个回答](https://stats.stackexchange.com/questions/201927/whats-rollout-policy-in-alphagos-paper)
+
+
+## seqGAN的存在问题
+
+
 
 ## Maximum-Likelihood Augmented Discrete Generative Adversarial Networks（MaliGAN）
 

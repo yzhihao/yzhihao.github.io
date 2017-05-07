@@ -27,6 +27,15 @@ icon: fa-book
 
 将从某个起始状态开始执行到终止状态的一次遍历**S1,A1,R2,…,Sk(状态，动作，回报)称为episode**。已知很多的episodes。
 
+## 探索的必要性：
+
+由于不知道智能体与环境交互的模型，蒙特卡罗方法是利用经验平均来估计值函数。能否得到正确的值函数，取决于经验。**如何获得充足的经验是无模型强化学习的核心所在。**
+
+在动态规划方法中，为了保证值函数的收敛性，算法会对状态空间中的状态进行逐个扫描。无模型的方法充分评估策略值函数的前提是每个状态都能被访问到。因此，在蒙特卡洛方法中必须采用一定的方法保证每个状态都能被访问到。其中一种方法是探索性初始化。
+
+
+
+
 ## Monte-Carlo Reinforcement Learning
 
 1. MC methods learn directly from episodes of experience(从episodes获得信息)
@@ -61,6 +70,12 @@ icon: fa-book
 <img src="{{ site.img_path }}/Machine Learning/Temporal_ca1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 <img src="{{ site.img_path }}/Machine Learning/Temporal_ca2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
+## mp（动态规划），mc，td的区别
+
+<img src="{{ site.img_path }}/Machine Learning/mp_mc_td.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 
 
 

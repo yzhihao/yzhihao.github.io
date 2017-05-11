@@ -45,12 +45,11 @@ icon: fa-book
 <img src="{{ site.img_path }}/Machine Learning/Policy_Network2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
-Policy gradient 是 RL 中另外一个大家族, 他不像 Value-based 方法 (Q learning, Sarsa), 但他也要接受环境信息 (observation), 不同的是他要输出不是 action 的 value, 而是具体的那一个 action, 这样 policy gradient 就跳过了 value 这个阶段. 而且个人认为 Policy gradient 最大的一个优势是:** 输出的这个 action 可以是一个连续的值, 之前我们说到的 value-based 方法输出的都是不连续的值, 然后再选择值最大的 action. 而 policy gradient 可以在一个连续分布上选取 action.**
+Policy gradient 是 RL 中另外一个大家族, 他不像 Value-based 方法 (Q learning, Sarsa), 但他也要接受环境信息 (observation), 不同的是他要输出不是 action 的 value, 而是具体的那一个 action, 这样 policy gradient 就跳过了 value 这个阶段. 而且个人认为 Policy gradient 最大的一个优势是:**输出的这个 action 可以是一个连续的值, 之前我们说到的 value-based 方法输出的都是不连续的值, 然后再选择值最大的 action,如果动作很多的话，这样贪婪策略来选择变得很不现实. 而 policy gradient 可以在一个连续分布上选取 action.这样对于动作众多或者连续动作的是很可行的**
 
 
 
 ## 更新网络
-
 
 改变动作的出现概率！
 现在我们不考虑别的，就仅仅从概率的角度来思考问题。我们有一个策略网络，输入状态，输出动作的概率。然后执行完动作之后，我们可以得到reward，或者result。那么这个时候，我们有个非常简单的想法：

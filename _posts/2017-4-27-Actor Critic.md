@@ -1,3 +1,24 @@
+---
+layout: post
+title:  Actor Critic
+desc: 我的博客
+keywords: 'blog,Machine Learning,AI'
+date: 2017-4-27T00:00:00.000Z
+categories:
+  - Machine Learning
+tags:
+  - Machine Learning
+  - AI
+icon: fa-book
+---
+
+
+## 目录
+**欢迎在文章下方评论，建议用电脑看**
+
+* 目录
+{:toc}
+
 # Actor Critic
 
 强化学习中的一种结合体 Actor Critic (演员评判家), 它合并了 以值为基础 (比如 Q learning) 和 以动作概率为基础 (比如 Policy Gradients) 两类强化学习算法.

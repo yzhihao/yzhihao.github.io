@@ -32,14 +32,14 @@ Actor-critic methods  : 许多RL方法 (e.g., policy gradient) 只作用于polic
 GAN和actor-critic具有许多相似之处。Actor-critic模型中的actor功能类似于GAN中的generator， 他们都是用来take an action or generate a sample。Actor-critic模型中的critic则类似于GAN中的discriminator, 主要用来评估 actor or generator 的输出。这篇论文主要贡献在于从不同的角度来说明了GAN和actor－critic模型的相同与不同点，从而鼓励研究GAN的学者和研究actor-critic模型的学者合作研发出通用、稳定、可扩展的算法，或者从各自的研究中获取灵感。
 
 
-<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
 ## bilevel optimization problems
 
 Both GANs and AC can be seen as bilevel or two-time-scale optimization problems, where one model is optimized with respect to the optimum of another model:
 
-<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN1.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 他们的共同思想都是互相优化，其中一个模型的优化关于另个的最优。
 
@@ -51,9 +51,9 @@ In some AC methods, the critic provides a lower-variance baseline for policy gra
 
 GANs can be seen as a modified actor-critic method with blind actors in stateless MDPs.
 
-<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN3.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN4.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN4.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 
 GANS可以看作是状态无限，然后actors是blind的一种特殊的MDP。原因是：在这里动作集合就是在每个像素生成器所给的值，状态就是生成的图片，因为生成图片的是无关联的，也就是现在生成的图片和未来生成的图片无关，这就导致了状态的无限性。actors是blind是因为它不知道环境的任何状态知识。还有就是当给系统展示real image的时候，actor应该参数不变，*在GANS体现在达到均衡吧，这个时候生成器就不改变它的权重了（我觉得）*。在actor-critic中体现的就是reword为一是，参数不需要太大的改变。
@@ -65,7 +65,7 @@ GANS可以看作是状态无限，然后actors是blind的一种特殊的MDP。�
 
 Having reviewed the basics of GANs, actor-critic algorithms and their extensions, here we discuss the “tricks of the trade" used by each community to make them work. The different methods are summarized in Table 1. While not meant as an exhaustive list, we have included those that we believe have either made the largest impact in their fields or have the greatest potential for crossover between fields.
 
-<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN2.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 ## An actor-critic algorithm for sequence prediction
 

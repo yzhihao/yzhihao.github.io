@@ -34,6 +34,8 @@ icon: fa-book
 
 <img src="{{ site.img_path }}/Machine Learning/51policy_gradient2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
+>这里需要注意的就是其实在我的理解下：actor加上策略的Prediction就是actor-critic模型。而这个prediction在Q-learning那里就是少了greedy or e-greedy（这个在之前已知。只不过这里需要注意的就是on-learning和off-learning的区别）
+
 <img src="{{ site.img_path }}/Machine Learning/51policy_gradient3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 

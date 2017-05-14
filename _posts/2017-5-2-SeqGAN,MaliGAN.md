@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  GAN FOR NLP
+title:  SeqGAN,MaliGAN
 desc: 我的博客
 keywords: 'blog,Machine Learning,AI'
 date: 2017-5-2T00:00:00.000Z
@@ -20,7 +20,7 @@ icon: fa-book
 {:toc}
 
 
-## GAN FOR NLP
+## SeqGAN,MaliGAN
 
 主要想记录生成序列的gan在nlp的应用。主要是下面两篇论文
 [SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient](https://arxiv.org/pdf/1609.05473v5.pdf)
@@ -38,6 +38,37 @@ GAN最开始是设计用于生成连续数据，但是自然语言处理中我�
 
 在这篇论文中，针对上面第一个问题，首先是将D的输出作为Reward，然后用Policy Gradient Method来训练G,也就是用D的输出作为Reward作为指导来改变Policy Gradient的方向，这也符合对抗网络的思想。针对第二个问题，通过蒙特卡罗搜索，针对部分生成的序列，用一个Roll-Out Policy（也是一个LSTM）来Sampling完整的序列，再交给D打分，最后对得到的Reward求平均值。
 
+## SeqGAN的ralated work and dissection
+
+
+之前his is due to the generator network in GAN is designed to be able to adjust the output continuously, which does not work on discrete data generation，也就是说作者说它不适合做text生成。
+
+详细请看reddit[Generative adversarial networks for text.](http://goo.gl/Wg9DR7)
+
+
+
+The most popular way of training RNNs is to maximize the likelihood of each token in the training data whereas (Bengio et al. 2015) pointed out that the discrepancy between training and generating makes the maximum likelihood estimation suboptimal and proposed scheduled sampling strategy (SS). Later(Huszár 2015) theorized that the objective function underneath SS is improper and explained the reason why GANs tend to generate natural looking samples in theory. Consequently, the GANs have great potential but are not practically feasible to discrete probabilistic models currently.
+
+上面的一段话摘自ralated work，这里说明了RNN的bias exposure的问题和在[How (not) to train your generative model: Scheduled sampling, likelihood, adversary]()说明了之前ss策略的不合理性和GAN的generate natural-looking samples。也就是说GAN存在潜力，只是在现实中没有表现。
+
+
+在这篇文章中提到[Data generation as sequential decision making](),序列可以表示成为一个a sequential decision making process, which can be potentially be solved by reinforcement learning techniques. 也就是这种问题可以由RL的方式来解决，当然，事实也是如此。现在很多的论文也是通过rl的方式来解决。
+
+受到阿尔法狗的启发，因为reward都是对整体的，所以同样的应用了蒙特卡洛搜索，引用的是这个：[A survey of monte carlo tree search methods]()。
+
+**MLE:**
+
+<img src="{{ site.img_path }}/Machine Learning/GAN_FOR_NLP10.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+传统的LSTM generator模型，其实就是语言模型。
+
+**DAD（一种MLE的改进模型）**
+
+Scheduled sampling for sequence prediction with recurrent neural networks.
+
+改进MLE的训练过程，解决生成模型decode阶段的exposure bias问题，即在训练过程中逐渐用预测输出替代实际输出作为下一个词的输入。
+
+
 
 ## 网络结构和训练
 
@@ -45,6 +76,8 @@ GAN最开始是设计用于生成连续数据，但是自然语言处理中我�
 <img src="{{ site.img_path }}/Machine Learning/GAN_FOR_NLP.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 1。左图为GAN网络训练的步骤1，即根据真实样本和伪造样本训练判别器D网 络，这里的D网络用的CNN实现。
+
+>用到的判别器（Discriminator）是卷积神经网络（CNN），而不是递归神经网络（RNN），这可能是一个不错的选择，因为Tong Zhang 就曾经使用CNN 做文本分类任务，**相比 RNN，CNN 更好训练一些，最终训练得到的判别器非常有效，与之相关的问题优化起来也相对容易些。**
 
 2、右图为GAN网络训练的步骤2，根据D网络回传的判别概率通过增强学习更新G网络，这里的G网络用的LSTM实现。
 
@@ -80,9 +113,13 @@ The rollout policy ... is a linear softmax policy based on fast, incrementally c
 
 也可以参看[这个回答](https://stats.stackexchange.com/questions/201927/whats-rollout-policy-in-alphagos-paper)
 
+## seqGAN实验
+
+<img src="{{ site.img_path }}/Machine Learning/GAN_FOR_NLP11.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+随机初始一个lstm生成器A，随机生成一部分训练数据，来训练各种生成模型，最后让各种生成模型随机产生一批验证数据，用生成器A去校验这些验证数据是否符合自己的分布。具体方式就是假设验证数据是a,b,c,。将a输入A查看输出b的概率p(b/a)，再输入c查看p(c/a,b)然后用以下标准评判。评判标准：负对数似然也就是交叉熵。
 
 ## seqGAN的存在问题
-
 
 
 ## Maximum-Likelihood Augmented Discrete Generative Adversarial Networks（MaliGAN）
@@ -94,6 +131,8 @@ The rollout policy ... is a linear softmax policy based on fast, incrementally c
 2.生成较长序列的时候需要用到多次random sampling，所以文章还**提出了两个降低方差的技巧**：第一个是蒙特卡罗树搜索，这个大家都比较熟悉; 第二个文章称之为Mixed MLE-Mali Training，就是从真实数据中进行抽样，若序列长度大于N，则固定住前N个词，然后基于前N个词去freely run G产生M个样本，一直run到序列结束。
 
 <img src="{{ site.img_path }}/Machine Learning/GAN_FOR_NLP3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
 
 
 

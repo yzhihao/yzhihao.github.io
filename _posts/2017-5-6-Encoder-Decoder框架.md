@@ -30,6 +30,14 @@ encoder-decoder模型的想法很简单：**对于RNN语言模型，在我们计
 
 <img src="{{ site.img_path }}/Machine Learning/encoder_decoder.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
+encoder层的处理单元是RNN(f)，decoder层是RNN(e)，对decoder层的输出采用softmax来获得时刻t输出该隐层的概率，上图的公式为：
+
+<img src="{{ site.img_path }}/Machine Learning/encoder_decoder2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+mt是输入词序列ft的embedding table；ht是隐层输出，pt是得到的概率。**可以看出encoder和decoder的区别在于：encoder的隐层初始值是零，而decoder层的初始值是encoder层的最终输出向量，这意味着decoder层获得了源序列的所有语义信息。**
+
+在每次decoder出一个et时，我们将其embedding和输出hidden state连结输入到下一个RNN单元，直到解码到句尾标记。（hidden state经过softmax后得到的概率向量的维度为词典维，类似于one-hot representation，每一维代表词典中的一个词，概率最高即为预测得到的词）
+
 模型的训练目标则是期望这个由Encoder得到的向量能够cover整个句子的语义，从研究人员做的大量实验来看我们发现这样的结构确实可以使得Encoder得到的向量cover**整个句子信息。**同时Decoder-RNN又能很好的生成一句话。**模型cost function为Decoder产生的句子的交叉熵。**
 
 

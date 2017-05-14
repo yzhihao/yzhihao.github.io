@@ -67,16 +67,7 @@ Having reviewed the basics of GANs, actor-critic algorithms and their extensions
 
 <img src="{{ site.img_path }}/Machine Learning/Connection_RL_AND_GAN2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-## An actor-critic algorithm for sequence prediction
 
-[原文](https://arxiv.org/pdf/1607.07086.pdf)
-
-
-The contributions of the paper can be summarized as follows: 1) we describe how RL methodology like the actor-critic approach can be applied to supervised learning problems with structured outputs; and 2) we investigate the performance and behavior of the new method on both a synthetic task and a real-world task of machine translation, demonstrating the improvements over maximum-likelihood and REINFORCE brought by the actor-critic training.
-
-## 创新点
-
-（1）提出**第一个使用强化学习例如actor-critic方法来训练神经网络生成序列。**（2）当前对数似然训练方法受限于他们的训练和测试之间的差异模式,即RNN在training时接受ground truth input，但testing时却接受自己之前的output，这两个setting不一致会导致error accumulate，这篇论文**解决这个问题，这个问题也叫做exposure bias问题。**这使得一个更接近训练阶段的test过程，允许直接优化为特定任务的评分，如BLEU。
 
 
 

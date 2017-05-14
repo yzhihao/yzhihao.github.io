@@ -86,3 +86,4 @@ f(s,a)不仅仅可以作为动作的评价指标，还可以作为目标函数�
 
 <img src="{{ site.img_path }}/Machine Learning/Policy_Gradient_actor.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
+

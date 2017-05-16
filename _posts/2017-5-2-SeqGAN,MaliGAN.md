@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  SeqGAN,MaliGAN
+title:  SeqGAN
 desc: 我的博客
 keywords: 'blog,Machine Learning,AI'
 date: 2017-5-2T00:00:00.000Z
@@ -20,7 +20,7 @@ icon: fa-book
 {:toc}
 
 
-## SeqGAN,MaliGAN
+## SeqGAN
 
 主要想记录生成序列的gan在nlp的应用。主要是下面两篇论文
 [SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient](https://arxiv.org/pdf/1609.05473v5.pdf)

@@ -29,7 +29,7 @@
 
 ## 策略搜索的分类
 
-<img src="{{ site.img_path }}/Machine Learning/Policy_Optimization2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/Policy_Optimization3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 策略搜索方法按照是否利用模型可以分为无模型的策略搜索方法和基于模型的策略搜索方法。
 
@@ -40,5 +40,36 @@
 而TRPO并没有回避这个问题，而是找到了替代损失函数，利用优化方法局部找到使得损失函数单调的步长
 
 
-## Cross Entropy	Method
+## Cross Entropy Method
+
+
+简单到不行，而且某些简单场景效果拔群，参见文章（Tetris是俄罗斯方块）
+[Learning Tetris with the Noisy Cross-Entropy Method](http://nipg.inf.elte.hu/publications/szita06learning.pdf)
+
+算法也很简单
+
+<img src="{{ site.img_path }}/Machine Learning/Policy_Optimization3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+意思就是，根据episodic的rewards排序，选top p%的policy parameters称之为elite set, 做gaussian distribution fitting，得到elite set的policy parameter的mean和variance。据此mean 和 variance产生新的一组policy parameter, 再做评估，选出top p%，以此类推。
+**采用evolution的思想，淘汰表现不好的策略，让表现好的策略繁衍出更好的策略，再做淘汰，以此类推，这就是CEM。**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

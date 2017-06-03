@@ -61,14 +61,15 @@ icon: fa-book
 
 ## 实验过程和结果（）
 
+
+
 部分实验结果：
 	
-<img src="{{ site.img_path }}/Machine Learning/Adversarial_Dialogue.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/Adversarial_Dialogue1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 ## RELATED WORK加上discussion
 
-待写
-
+这篇文章是[ Deep reinforcement learning for dialogue generation]()的一个扩展。在传统的[ A network-based end-to-end trainable task-oriented dialogue system.]()做了改进。RL在对话系统中[Continuously Learning Neural Dialogue Management]()是首先结合对话系统的。[Online Sequence-to-Sequence Active Learning for Open-Domain Dialogue Generation]()这篇是一篇在线对话系统训练的模型。
 
 ##　文章解读和评价
 

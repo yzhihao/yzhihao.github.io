@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Hybrid Code Networks: practical and efficient end-to-end dialog control with supervised and reinforcement learning
+title:  Hybrid Code Networks
 desc: 我的博客
 keywords: 'blog,Machine Learning,AI'
 date: 2017-5-25T00:00:00.000Z

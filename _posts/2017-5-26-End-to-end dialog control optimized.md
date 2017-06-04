@@ -1,3 +1,24 @@
+---
+layout: post
+title:  End-to-end LSTM-based dialog control
+desc: 我的博客
+keywords: 'blog,Machine Learning,AI'
+date: 2017-5-27T00:00:00.000Z
+categories:
+  - Machine Learning
+tags:
+  - Machine Learning
+  - AI
+icon: fa-book
+---
+
+
+## 目录
+**建议用电脑看**
+
+* 目录
+{:toc}
+
 # End-to-end LSTM-based dialog control optimized with supervised and reinforcement learning
 
 ## 主要贡献

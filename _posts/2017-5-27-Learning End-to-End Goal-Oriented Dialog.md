@@ -35,6 +35,8 @@ End_Goal_Oriented_Dialog
 
 ## 网络结构原理
 
+<img src="{{ site.img_path }}/Machine Learning/Memory_network.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 ## 算法流程和讲解
 
 

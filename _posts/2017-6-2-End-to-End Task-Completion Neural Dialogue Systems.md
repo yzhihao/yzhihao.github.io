@@ -1,3 +1,24 @@
+---
+layout: post
+title:  End-to-End Task-Completion Neural Dialogue Systems
+desc: 我的博客
+keywords: 'blog,Machine Learning,AI'
+date: 2017-6-2T00:00:00.000Z
+categories:
+  - Machine Learning
+tags:
+  - Machine Learning
+  - AI
+icon: fa-book
+---
+
+
+## 目录
+**建议用电脑看**
+
+* 目录
+{:toc}
+
 # End-to-End Task-Completion Neural Dialogue Systems
 
 ## 主要贡献
@@ -36,6 +57,7 @@
 
 语言理解（LU）：LU的一个主要任务是自动将用户的查询域与该域中特定的意图一起分类，并在一组时隙中填充以形成语义帧。流行的IOB（in-out-begin）格式用于表示槽标签。LU组件由单个LSTM实现，该单个LSTM同时执行意图预测和槽缝填充。使用反向传播训练LSTM模型的权重以最大化训练集标签的条件似然概率。预测标签集是IOB格式槽标签和意图标签的级联集合；因此，可以使用监督方式在标记的数据集中使用所有可用的对话动作和对话对来训练该模型。IOB格式标签示例如下：
 
+<img src="{{ site.img_path }}/Machine Learning/end_end_Task_Completion01.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 4.对话管理模块（DM）
 
@@ -74,6 +96,8 @@
 <img src="{{ site.img_path }}/Machine Learning/end_end_Task_Completion2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 ## RELATED WORK加上discussion
+
+之前的end to end，比如基于Memory network的那个模型，因为他们是sl来训练的，这样就需要大量的数据，不然就很容易过拟合。
 
 本文提出了一种端到端学习框架，用于任务完成对话系统。 我们的实验表明，强化学习系统的性能优于基于规则的代理，并具有更好的鲁棒性，以允许在真实世界任务完成方案中与用户进行自然交互。
 

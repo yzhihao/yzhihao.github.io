@@ -49,9 +49,9 @@ icon: fa-book
 
 说到增强学习，就不得不提增强学习的四元素：
 
-Action：这里的action是指生成的reply，action空间是无限大的，因为可以reply可以是任意长度的文本序列。
+Action：**这里的action是指生成的reply，action空间是无限大的**，因为可以reply可以是任意长度的文本序列。
 
-State：这里的state是指[pi,qi]，即上一轮两个人的对话表示。
+State：这里的**state是指[pi,qi]，即上一轮两个人的对话表示。**
 
 Policy：policy是指给定state之后各个action的概率分布。可以表示为：<img src="{{ site.img_path }}/Machine Learning/Reinforcement_Dialogue1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
@@ -63,7 +63,7 @@ Reward：reward表示每个action获得的回报，本文自定义了三种rewar
 
 <img src="{{ site.img_path }}/Machine Learning/Reinforcement_Dialogue2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-其实就是给定这个reply之后，生成的下一个reply是dull的概率大小。这里所谓的dull就是指一些“呵呵呵”的reply，比如“I don’t know what you are talking about”等没有什么营养的话，作者手动给出了这样的一个dull列表。
+其实就是**给定这个reply之后，生成的下一个reply是dull的概率大小。这里所谓的dull就是指一些“呵呵呵”的reply**，比如“I don’t know what you are talking about”等没有什么营养的话，作者手动给出了这样的一个dull列表。
 
 2.Information Flow：
 
@@ -71,22 +71,21 @@ Reward：reward表示每个action获得的回报，本文自定义了三种rewar
 
 <img src="{{ site.img_path }}/Machine Learning/Reinforcement_Dialogue3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-这里的h是bot的reply表示，i和i+1表示该bot的前后两轮。这个式子表示同一个bot两轮的对话越像reward越小。
+这里的h是bot的reply表示，i和i+1表示该bot的前后两轮。这个式子表示**同一个bot两轮的对话越像reward越小。**
 
 3.Semantic Coherence
 
-这个指标是用来衡量生成reply是否grammatical和coherent。如果只有前两个指标，很有可能会得到更高的reward，但是生成的句子并不连贯或者说不成一个自然句子。
+这个指标是用来**衡量生成reply是否grammatical和coherent。**如果只有前两个指标，很有可能会得到更高的reward，但是生成的句子并不连贯或者说不成一个自然句子。
 
 <img src="{{ site.img_path }}/Machine Learning/Reinforcement_Dialogue4.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-这里采用互信息来确保生成的reply具有连贯性。
-最终的reward由这三部分加权求和计算得到。
+这里采用**互信息来确保生成的reply具有连贯性。最终的reward由这三部分加权求和计算得到。**
 
 增强学习的几个要素介绍完之后，接下来就是如何仿真的问题，本文采用两个bot相互对话的方式进行。
 
 step 1 监督学习。将数据中的每轮对话当做target，将之前的两句对话当做source进行seq2seq训练得到模型，这一步的结果作为第二步的初值。
 
-step 2 增强学习。因为seq2seq会容易生成dull reply，如果直接用seq2seq的结果将会导致增强学习这部分产生的reply也不是非常的diversity，从而无法产生高质量的reply。所以，这里用MMI(Maximum Mutual Information，这里与之前Jiwei Li的两篇paper做法一致)来生成更加diversity的reply，然后将生成最大互信息reply的问题转换为一个增强学习问题，这里的互信息score作为reward的一部分（r3）。用第一步训练好的模型来初始化policy模型，给定输入[pi,qi]，生成一个候选列表作为action集合，集合中的每个reply都计算出其MMI score，这个score作为reward反向传播回seq2seq模型中，进行训练。整个仿真过程如下图：
+step 2 增强学习。因为seq2seq会容易生成dull reply，如果直接用seq2seq的结果将会导致增强学习这部分产生的reply也不是非常的diversity，从而无法产生高质量的reply。所以，这里**用MMI(Maximum Mutual Information，这里与之前Jiwei Li的两篇paper做法一致)来生成更加diversity的reply**，然后将生成最大互信息reply的问题转换为一个增强学习问题，这里的互信息score作为reward的一部分（r3）。用第一步训练好的模型来初始化policy模型，给定输入[pi,qi]，生成一个候选列表作为action集合，集合中的每个reply都计算出其MMI score，这个score作为reward反向传播回seq2seq模型中，进行训练。整个仿真过程如下图：
 
 <img src="{{ site.img_path }}/Machine Learning/Reinforcement_Dialogue5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 

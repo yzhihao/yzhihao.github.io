@@ -83,7 +83,7 @@ icon: fa-book
 
 (2):[Policy Gradient](https://yzhihao.github.io/machine%20learning/2017/04/26/Policy-Gradient.html)
 
-(3):[Actor critic](https://yzhihao.github.io/2017/04/27/Actor-Critic.html)
+(3):[Actor critic](https://yzhihao.github.io/machine%20learning/2017/04/27/Actor-Critic.html)
 
 (4):[蒙特卡洛树搜索 mcts](https://yzhihao.github.io/2017/04/28/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2-MCTS.html)
 

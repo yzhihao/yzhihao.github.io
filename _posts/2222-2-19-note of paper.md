@@ -60,7 +60,7 @@ Andrew Ng 曾说，不管是已经工作还是在读学生，每周坚持读几�
 
 (4)[Hybrid Code Networks](https://yzhihao.github.io/machine%20learning/2017/05/25/Hybrid-Code-Networks.html)
 
-(5)[End To End task Completion neural dialogue systems](https://yzhihao.github.io/2017/06/02/End-to-End-Task-Completion-Neural-Dialogue-Systems.html)
+(5)[End To End task Completion neural dialogue systems](https://yzhihao.github.io/machine%20learning/2017/06/02/End-to-End-Task-Completion-Neural-Dialogue-Systems.html)
 
 
 ## open domain dialog system

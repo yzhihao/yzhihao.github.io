@@ -61,7 +61,7 @@ max和sample策略是每一步使用的策略，而beam-search是全局解码算
 
 传统的Encoder-Decoder缺点是，无论之前的context有多长，包含多少信息量，最终都要被压缩成一个几百维的vector。这意味着context越大，最终的state vector会丢失越多的信息。
 
-事实上，因为context在输入时已知，一个模型完全可以在decode的过程中利用context的全部信息，而不仅仅是最后一个state。
+事实上，因为context在输入时已知，一个模型完全可以在decode的过程中利用context的全部信息,或者部分信息而不仅仅是最后一个state。
 
 **而Attention的思想，即在得到Encoder向量后，在进行Decoder的时候模型不仅会用到向量还会用到每个词对应的RNN隐层向量。**这里多插入一句，Attention其实是一种思想，它可以有多种实现方式。
 
@@ -104,7 +104,9 @@ Attention机制最早是在视觉图像领域提出来的，应该是在九几�
 
 从结果来看相比传统的NMT（RNNsearch是attention NMT，RNNenc是传统NMT）效果提升了不少，最大的特点还在于它可以可视化对齐，并且在长句的处理上更有优势。
 
-### Effective Approaches to Attention-based Neural Machine Translation 
+`在这里的可视化对齐值得是，比如在NMT中，就是两种语言中的单词翻译对应，当然可能顺序是不一样的`
+
+### Effective Approaches to Attention-based Neural Machine Translation
 
 这篇论文是继上一篇论文后，一篇很具代表性的论文，他们的工作告诉了大家attention在RNN中可以如何进行扩展，这篇论文对后续各种基于attention的模型在NLP应用起到了很大的促进作用。在论文中他们提出了两种attention机制，一种是全局（global）机制，一种是局部（local）机制。
 

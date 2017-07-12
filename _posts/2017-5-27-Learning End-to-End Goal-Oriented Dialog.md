@@ -25,7 +25,9 @@ icon: fa-book
 
 这篇论文主要是讲解了End-to-End 模型（基于Memory）在Goal-Oriented Dialog system的的优缺点。并用 restaurant reservation来进行说明。 提出（1）favors reproducibility and comparisons, and （2） is lightweight and easy to use的模型标准。在传统的每一小部分（具体如下图）都用上把bAbI tasks use that to gauge the strengths and weaknesses of current end-to-end systems with no domain knowledge.而不是改进模型。
 
-End_Goal_Oriented_Dialog
+<img src="{{ site.img_path }}/Machine Learning/End_Goal_Oriented_Dialog.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+**也就是说：这个模型其实就是在验证Memory network 在dialogue systems 上也是有用的!**
 
 
 
@@ -36,6 +38,10 @@ End_Goal_Oriented_Dialog
 ## 网络结构原理
 
 <img src="{{ site.img_path }}/Machine Learning/Memory_network.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+上图是Memory network 的一个架构图。在QA方面，这个结构是比较有用的，体现出了其不错的性质。
+
+<img src="{{ site.img_path }}/Machine Learning/Memory_network1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 ## 算法流程和讲解
 

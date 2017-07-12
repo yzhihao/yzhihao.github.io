@@ -69,7 +69,13 @@ Andrew Ng 曾说，不管是已经工作还是在读学生，每周坚持读几�
 
 (2)[Deep Reinforcement Learning for Dialogue Generation](https://yzhihao.github.io/machine%20learning/2017/05/27/Deep-Reinforcement-Learning-for-Dialogue-Generation.html)
 
+### conditional chatbot
 
+(1)[Topic aware neural response generation](https://yzhihao.github.io/2017/07/12/Topic-Aware-Neural-Response-Generation.html)
+
+(2)[Emotional Chatting Machine: Emotional Conversation Generation with Internal and External Memory](https://yzhihao.github.io/2017/07/11/Emotional-Chatting-Machine.html)
+
+(3)[A knowledge Grounded neural conversation model](https://yzhihao.github.io/2017/07/09/A-Knowledge-Grounded-Neural-Conversation-Model.html)
 
 
 

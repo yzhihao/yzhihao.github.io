@@ -29,7 +29,8 @@
 
 <img src="{{ site.img_path }}/Machine Learning/End_Network_Dialogue1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-这个组件的输入时用户的input，输出是一个informable slot和requestable slot的概率分布，这里的informable slot是指food，price range和area（以订餐为例），用来约束数据库中的查询，requestable slot是指address，phone，postcode等一些可以被询问的值。这里会定义一个针对具体task的知识图谱，来表示这些slot之间的关系，每个slot都会定义一个tracker，tracker的模型如上图所示，包括一个CNN特征提取模块和一个Jordan型的RNN模块，CNN不仅仅对当前的input进行处理，还对上一轮的user input进行处理，综合起来作为RNN的输入。
+这个组件的输入时用户的input，**输出是一个informable slot和requestable slot的概率分布**，这里的informable slot是指food，price range和area（以订餐为例），用来约束数据库中的查询，requestable slot是指address，phone，postcode等一些可以被询问的值。这里会定义一个针对具体task的知识图谱，来表示这些slot之间的关系，每个slot都会定义一个tracker，tracker的模型如上图所示，包括一个CNN**特征提取模块**和一个Jordan型的RNN模块，**CNN不仅仅对当前的input进行处理，还对上一轮的user input进行处理，综合起来作为RNN的输入。**
+
 这个组件的意义在于获取到预先定好的知识图谱中每个slot的分布，就是说弄清楚用户在这轮对话中的需求是哪个词或者词组。
 
 3、Database Operator

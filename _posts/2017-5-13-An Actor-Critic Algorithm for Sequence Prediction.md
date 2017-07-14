@@ -67,7 +67,7 @@ Note that we use the probability rather than the log probability in this formula
 
 （1）应用的是**Temporal-difference learning**来评估策略，这个应该不算是一个trick，而是在actor-critic中本来就有的。
 
-（2）其次是trick是Applying deep RL techniques，首先是如果Q是非线性的话，就会产生梯度偏离的问题，为了解决这个问题作者借鉴[Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)，试图remove掉target network 。然后也需要注意的是两个模型都用到对方的output来训练自己。这个容易造成的结果就是creates a potentially dangerous feedback loop（危险反复循环）。解决问题就是借鉴[Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)，sample一些prediction来保证他们真正的训练到。
+（2）其次是trick是Applying deep RL techniques，首先是如果Q是非线性的话，就会产生梯度偏离的问题，为了解决这个问题作者借鉴[Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)，使用了一个额外的target network，他们试图remove掉target network ，但那样的效果不好。然后也需要注意的是两个模型都用到对方的output来训练自己。这个容易造成的结果就是creates a potentially dangerous feedback loop（危险反复循环）。解决问题就是借鉴[Continuous control with deep reinforcement learning](https://arxiv.org/abs/1509.02971)，sample一些prediction来保证他们真正的训练到。
 
 (3)然后是trick是Dealing with large action spaces，This can be alleviated by putting constraints on the critic values for actions that are rarely sampled. We found experimentally that shrinking the values of these rare actions is necessary for the algorithm to converge。也就是在跟新critic的时候加上一个类似正则化的项，这个的作用就是缩小那些几乎不出现的动作的价值，降低critic的output的方差。这个trick在[Learning simple algorithms from examples](https://arxiv.org/abs/1511.07275)也有用到。这个trick具体如下：
 

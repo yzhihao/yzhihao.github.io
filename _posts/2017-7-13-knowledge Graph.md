@@ -1,4 +1,4 @@
-# knowledge Graph
+# knowledge Graph综述
 
 **这篇主要是这篇：[知识图谱研究进展](http://tie.istic.ac.cn/ch/reader/create_pdf.aspx?file_no=201701002&flag=1&journal_id=qbgc&year_id=2017)的笔记的想法**
 
@@ -41,7 +41,7 @@ G = (E,R,S) ,其中 E = {e<sub>1</sub>,e<sub>2</sub>...e<sub>|E|</sub>} 是知�
 
 **知识计算主要是根据图谱提供的信息得到更多隐含的知识**，如通过本体或者规则推理技术可以获取数据中存在的隐含知识；而链接预测则可预测实体间隐含的关系；同时使用社会计算的不同算法在知识网络上计算获取知识图谱上存在的社区，提供知识间关联的路径；通过不一致检测技术发现数据中的噪声和缺陷。通过知识计算知识图谱可以产生大量的智能应用如可以提供精确的用户画像为精准营销系统提供潜在的客户；提供领域知识给专家系统提供决策数据，给律师、医生、公司 CEO 等提供辅助决策的意见；提供更智能的检索方式，使用户可以通过自然语言进行搜索；当然知识图谱也是问答必不可少的重要组建。
 
-<img src="{{ site.img_path }}/Machine Learning/knowledge_Graph.jpg" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+<img src="{{ site.img_path }}/Machine Learning/knowledge_Graph.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 从上图可以看出，知识图谱涉及到的技术非常多，每一项技术都需要专门去研究，而且已经有很多研究成果。由于篇幅的限制，本文重点介绍知识图谱构建和知识计算的几个核心技术。
 

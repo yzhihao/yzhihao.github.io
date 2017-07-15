@@ -55,16 +55,18 @@ Policy gradient 是 RL 中另外一个大家族, 他不像 Value-based 方法 (Q
 现在我们不考虑别的，就仅仅从概率的角度来思考问题。我们有一个策略网络，输入状态，输出动作的概率。然后执行完动作之后，我们可以得到reward，或者result。那么这个时候，我们有个非常简单的想法：
 
 如果某一个动作得到reward多，那么我们就使其出现的概率增大，如果某一个动作得到的reward少，那么我们就使其出现的概率减小。
-当然，也显然的，用reward来评判动作的好坏是不准确的，甚至用result来评判也是不准确的。毕竟任何一个reward，result都依赖于大量的动作才导致的。但是这并不妨碍我们做这样的思考：
+当然，也显然的，用reward来评判动作的好坏是不准确的，甚至用result来评判也是不准确的。**毕竟任何一个reward，result都依赖于大量的动作才导致的。**但是这并不妨碍我们做这样的思考：
 
 如果能够构造一个好的动作评判指标，来判断一个动作的好与坏，那么我们就可以通过改变动作的出现概率来优化策略！
 假设这个评价指标是f(s,a),那么我们的Policy Network输出的是概率。一般情况下，更常使用log likelihood <img src="{{ site.img_path }}/Machine Learning/Policy_Network3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>。原因的话看这里[Why we consider log likelihood instead of Likelihood in Gaussian Distribution](http://link.zhihu.com/?target=http%3A//math.stackexchange.com/questions/892832/why-we-consider-log-likelihood-instead-of-likelihood-in-gaussian-distribution)。
+
+>简单说明：其实要用log的主要原因就是我们之后要用到极大似然的方式来求，一个是比较好算，第二是这样才不会造成计算的溢出。
 
 因此，我们就可以构造一个损失函数如下：
 
 <img src="{{ site.img_path }}/Machine Learning/Policy_Network4.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-怎么理解呢？举个简单的AlphaGo的例子吧。对于AlphaGo而言，f(s,a)就是最后的结果。也就是一盘棋中，如果这盘棋赢了，那么这盘棋下的每一步都是认为是好的，如果输了，那么都认为是不好的。好的f(s,a)就是1，不好的就-1。所以在这里，如果a被认为是好的，那么目标就是最大化这个好的动作的概率，反之亦然。
+怎么理解呢？举个简单的AlphaGo的例子吧。对于AlphaGo而言，**f(s,a)就是最后的结果。**也就是一盘棋中，如果这盘棋赢了，那么这盘棋下的每一步都是认为是好的，如果输了，那么都认为是不好的。好的f(s,a)就是1，不好的就-1。所以在这里，如果a被认为是好的，那么目标就是最大化这个好的动作的概率，反之亦然。
 
 这就是Policy Gradient最基本的思想。
 

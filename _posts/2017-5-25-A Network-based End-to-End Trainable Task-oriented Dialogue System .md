@@ -16,7 +16,7 @@
 
 1、Intent Network
 
-这个部分可以理解为seq2seq的encoder部分，将用户的输入encode成一个vector z(t)。encoder部分分别用了lstm和cnn两种模型对该输入进行建模。这两种句子表示的方法在之前的文章中都有介绍。
+这个部分可以理解为seq2seq的encoder部分，将用户的输入encode成一个vector z<sub>t</sub>。encoder部分分别用了lstm和cnn两种模型对该输入进行建模。这两种句子表示的方法在之前的文章中都有介绍。
 
 2、Belief Trackers
 

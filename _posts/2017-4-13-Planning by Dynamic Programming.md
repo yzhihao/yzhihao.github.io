@@ -47,9 +47,18 @@ MDP需要解决的问题有两种，**第一种是prediction，它已知MDP的S,
 
 ###  policy iteration
 
+上面的公式可能不太好理解，下面结合例子和公式，在理解下！
+
 <img src="{{ site.img_path }}/Machine Learning/27Policy_Iteration.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
 那么这里要注意的是policy evaluation部分。这里的迭代很重要的一点是需要知道state状态转移概率p。也就是说依赖于model模型。而且按照算法要反复迭代直到收敛为止。所以一般需要做限制。比如到某一个比率或者次数就停止迭代。那么需要特别说明的是不管是策略迭代还是值迭代都是在理想化的情况下（上帝视角）推导出来的算法，本质上并不能直接应用，因为依赖Model。
+
+图是一个叫Small Gridworld的例子，左上角和右下角是终点，γ=1，移动一步reward减少1，起始的random policy是朝每个能走的方向概率相同，先单独看左边一列，它表示在第k次迭代每个state上value function的值，这一列始终采用了random policy，这里的value function就是通过Bellman Expectation Equation得到的，考虑k=2的情况，-1.7 = -1.0 + 2*(1/3.0)*(-1)，-2.0 = -1.0 + 4*(1/4.0)*(-1)。而右边一列就是在当前的value function情况下通过greedy算法找到当前朝哪个方向走更好。
+
+Policy Iteration会一直迭代到收敛，具体证明过程可以去看视频(46:09起)。
+
+<img src="{{ site.img_path }}/Machine Learning/37value_iteration1.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
 
 ###  value iteration
 
@@ -59,6 +68,21 @@ MDP需要解决的问题有两种，**第一种是prediction，它已知MDP的S,
 
 <img src="{{ site.img_path }}/Machine Learning/27Iteration_any.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
+第一种是对于所有的状态计算出式子右边的部分，然后同时更新所有的V(s),这种称作 同步更新（Synchronous Update）；另一种叫做异步更新（Asynchronous Update），假设我们按照固定的状态顺序更新V(s)，那么首先会更新第1个状态 的V(s)，接着是第2个状态的V(s)、第3个状态的V(s)、第4个状态的V(s) ，如果在更新第5个状态的V(s)用到的V(s′)恰好是第1、2、3、4状态的， 那么我们使用的V(s′)是前面几次迭代更新的版本。两种方法中异步更新会 收敛地稍微快一点，值迭代会使得V(s)不断地向V<sup>∗</sup>(s)接近，如 是最后求解出来的V<sup>∗</sup>(s)。
+
+<img src="{{ site.img_path }}/Machine Learning/37value_iteration3.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+求解出V<sup>∗</sup>(s)之后，根据就可以计算π<sup>∗</sup>(s)， 下面举一个例子计算π([3,1])的最优策略，可以 计算出采取各个动作的未来总回报的期望，假设机器人碰到墙壁之后会回到 原来的位置，所以机器人向EE走的时候有0.1的可能性会碰到墙壁然后又 返回到[3,1]位置。
+
+<img src="{{ site.img_path }}/Machine Learning/37value_iteration2.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+
+对比4个方向的未来总回报的期望值之后，发现采取E动作之后得到的值最大， 所以在[3,1]位置会采取动作E。对每个状态都计算最优动作之后就可以得到如 所示的结果。
+
+
+## 加深理解
+
+第一：这个是对于model的最优决策寻找方式！第二：在value iteration中的可以直接看作 Greedy Policy Improvement的另一种作用（更新值而不是寻找策略），可以看到，他们的公式是一样的。第三：看上去value iteration是比policy iteration更加直接的。
 
 ## Greedy Policy Improvement
 

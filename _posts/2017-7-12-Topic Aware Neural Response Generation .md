@@ -20,11 +20,17 @@
 
 上图就是它的模型架构。说下它的实现思路：
 
-获取 topic word 的 embedding vector 用新浪微博语料训练 TwitterLDA 模型，算法是 collapsed Gibbs sampling。消息输入后，模型给出所属 topic，**取该 topic 下的 top100 作为消息的 topic words，**删除通用词后，将这些 topic words 转为各自的向量表示。其中，每个 topic word 的向量是通过计算 topic word 在所有 topic 下的**归一化频率得到的（文中 Eq. 4,**，每个 topic word 对应的 vector 维度取决与 LDA 模型设置的 topic 数量；
+**topic 的获取**
 
-通过 BiGRU 网络对输入消息做 encode；
+<img src="{{ site.img_path }}/Machine Learning/Topic_Aware_chat.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-根据第 1 步得到 input message 的 topic vector，结合第 2 步得到的 last hidden state，通过 MLP 网络和 softmax 层得到 topic attention，即得到了各 topic word 的权重；
+就是计算改topic下的词分布情况。
+
+第一	步：获取 topic word 的 embedding vector 用新浪微博语料训练 TwitterLDA 模型，算法是 collapsed Gibbs sampling。消息输入后，模型给出所属 topic，**取该 topic 下的 top100 作为消息的 topic words，**删除通用词后，将这些 topic words 转为各自的向量表示。其中，每个 topic word 的向量是通过计算 topic word 在所有 topic 下的**归一化频率得到的（文中 Eq. 4,**，每个 topic word 对应的 vector 维度取决与 LDA 模型设置的 topic 数量；
+
+第二步：通过 BiGRU 网络对输入消息做 encode得到一系列的h<sub>i</sub>；
+
+根据第 1 步得到 input message 的 topic vector（**也就是K<sub>i</sub>**），结合第 2 步得到的 last hidden state（也就是h5），通过 MLP 网络和 softmax 层得到 topic attention，即得到了各 topic word 的权重；
 
 构造由 message attention 和 topic attention 联合影响的解码概率（文中 Eq. 6），该概率可突出 topic words 的作用。基于这个概率进行 token 解码；
 

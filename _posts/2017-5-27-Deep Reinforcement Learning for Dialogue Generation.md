@@ -38,7 +38,7 @@ icon: fa-book
 
 2、生成一个reply之后，可以定量地描述这个reply对后续阶段的影响。
 
-所以，本文提出用**seq2seq+增强学习（DQN）**的思路来解决这个问题。
+所以，本文提出用**seq2seq+增强学习（pg），设计了特殊的回报R，来生成对话**的思路来解决这个问题。
 
 ## 论文背景
 
@@ -89,7 +89,7 @@ step 2 增强学习。因为seq2seq会容易生成dull reply，如果直接用se
 
 <img src="{{ site.img_path }}/Machine Learning/Reinforcement_Dialogue5.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
 
-两个bot在对话，初始的时候给定一个input message，然后bot1根据input生成5个候选reply，依次往下进行，因为每一个input都会产生5个reply，随着turn的增加，reply会指数增长，这里在每轮对话中，通过sample来选择出5个作为本轮的reply。
+两个bot在对话，初始的时候给定一个input message，然后bot1根据input生成5个候选reply，依次往下进行，因为每一个input都会产生5个reply，随着turn的增加，**这里设置的最多是5turn**，reply会指数增长，这里在每轮对话中，通过sample来选择出5个作为本轮的reply。
 
 ## 算法流程和讲解
 

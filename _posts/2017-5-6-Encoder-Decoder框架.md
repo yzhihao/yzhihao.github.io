@@ -40,6 +40,12 @@ mt是输入词序列ft的embedding table；ht是隐层输出，pt是得到的概
 
 模型的训练目标则是期望这个由Encoder得到的向量能够cover整个句子的语义，从研究人员做的大量实验来看我们发现这样的结构确实可以使得Encoder得到的向量cover**整个句子信息。**同时Decoder-RNN又能很好的生成一句话。**模型cost function为Decoder产生的句子的交叉熵。**
 
+## seq2sqeq 优化
+
+<img src="{{ site.img_path }}/Machine Learning/encoder_decoder8n.png" alt="header1" style="height:auto!important;width:auto%;max-width:1020px;"/>
+
+在训练的时候，**我们需要的是直接用MLE去优化-log值，得到极大似然估计。**
+
 ## 取词策略
 
 在rnn语言模型（rnnlm）中，测试（生成）过程就是利用已经训练好的RNNLM来生成一段文本。具体过程为，首先输入一个初始词用于触发（这个词可以简单的控制生成的内容，比如想生成与“人工智能”相关的内容，那么初始输入就是“人工智能”。倘若想让机器完全自动生成，那么第一个输入就是“start”），然后模型给出一个输出Y1，（这个Yi是词表上所有词的概率分布根据这个概率分布），由这个概率分布，我们通过某种策略（max或者sample策略，后面会详细介绍）选取得到一个词X1，然后再次将X1输入到RNN中，得到Y2，再得到X2，如此往复，至到得到“end”（或者达到最大循环次数）结束生成。

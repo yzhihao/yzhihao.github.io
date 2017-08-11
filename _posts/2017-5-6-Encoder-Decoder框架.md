@@ -71,6 +71,7 @@ max和sample策略是每一步使用的策略，而beam-search是全局解码算
 
 **而Attention的思想，即在得到Encoder向量后，在进行Decoder的时候模型不仅会用到向量还会用到每个词对应的RNN隐层向量。**这里多插入一句，Attention其实是一种思想，它可以有多种实现方式。
 
+>attention思想知识一种思想，有多种实现方式，有很多类别，比如soft和hard的区分（这两者的区分主要在于sotf得到attention的上下文C<sub>i</sub>是通过加权和得到的，其中的比重最大可以看成是对齐的！而hard的attention的上下文C是固定的一个或者几个的encoder隐状态构成的，用分类表示是否选取莫个隐状态）。
 
 ### Attention研究进展
 

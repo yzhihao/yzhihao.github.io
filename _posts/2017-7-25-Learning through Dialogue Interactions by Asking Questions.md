@@ -73,7 +73,9 @@
 
 
 我们采纳的第一个学习策略是基于Reward的模拟策略（简称vanilla-MemN2N） (Weston, 2016)。在训练时，该模型将student提供的答案做最大化对数似然估计（丢弃那些错误答案的示例）。候选的答案是在记忆中出现的词，这也就意味着bot只能从它之前看过的知识库中预测实体。
-我们也使用了MemN2N的一个变体，称为“context MemN2N”（Cont-MemN2N for short），即我们将每个词向量用该词向量和该词周围出现的其他词向量的平均值来替换。我们使用前面和后面的单词作为上下文，上下文单词的数量是在dev集合上选择的超参数。
+
+我们也使用了MemN2N的一个变体，称为“context MemN2N”（Cont-MemN2N for short），即我们将每个词向量**用该词向量和该词周围出现的其他词向量的平均值来替换。**我们使用前面和后面的单词作为上下文，上下文单词的数量是在dev集合上选择的超参数。
+
 模型 vanilla-MemN2N 和 Cont-MemN2N 的共同问题是它们只能利用bot的答案作为信息，而忽略了teacher的反馈。因此，我们提出了一个可以联合预测bot答案和teacher反馈的模型（可以简称为TrainQA（+FP））。Bot的答案可以使用vanilla-MemN2N来预测，teacher的反馈可以使用ForwardPrediction(FP)模型（Jason Weston. Dialog-based language learning. arXiv preprint arXiv:1604.06045, 2016）来反馈。我们建议读者可以细读下FP模型的细节。在训练时，模型可以同时从teacher的反馈预测和具有正向reward的答案中学习。在测试时，模型将只能预测bot的答案。
 在第四章节的TestModelAQ设定中，模型需要决定要问什么问题，我们这里同样使用vanilla-MemN2N，输入question和上下文，然后输出bot要问的问题。
 
@@ -86,7 +88,7 @@ student在每次交流时都会提出问题，这样感觉还不错，因为对s
 
 
 
-一个二元的vanilla-MemN2N（可以视为）模型用来决定bot是否需要提问，即为了给teacher答复，bot是否需要问一些东西。第二个MemN2N模型用来决定bot的回答，可以视为。对应QA和AQ两种不同的模型，这也就意味这bot会根据它是否选择提问而使用两种不同的模型作为最后答案的预测。 
+一个二元的vanilla-MemN2N（可以视为）模型用来决定bot是否需要提问，即为了给teacher答复，bot是否需要问一些东西。第二个MemN2N模型用来决定bot的回答，可以视为。对应QA和AQ两种不同的模型，这也就意味这bot会根据它是否选择提问而使用两种不同的模型作为最后答案的预测。
 
 ## 实验
 
